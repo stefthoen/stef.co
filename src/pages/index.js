@@ -5,6 +5,9 @@ import styled from "styled-components"
 import Layout from "../components/layout"
 import Case from "../components/case"
 import SEO from "../components/seo"
+import IconDesign from "../svgs/feature_design.svg"
+import IconBuild from "../svgs/feature_build.svg"
+import IconService from "../svgs/feature_service.svg"
 
 export const caseImage = graphql`
   fragment caseImage on File {
@@ -16,7 +19,35 @@ export const caseImage = graphql`
   }
 `
 
-const About = styled.section``
+const Features = styled.section`
+	article {
+		display: grid;
+		grid-template-columns: 1fr 3fr;
+		grid-column-gap 2em;
+		grid-template-areas:
+			"icon description"
+			"name description"
+		;
+		align-items: center;
+		justify-items: center;
+	}
+
+	.icon {
+		grid-area: icon;
+	}
+
+	h2 {
+		grid-area: title;
+	}
+
+	h3 {
+		grid-area: name;
+	}
+
+	p {
+		grid-area: description;
+	}
+`
 
 const IndexPage = () => {
   const imageData = useStaticQuery(graphql`
@@ -42,13 +73,13 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <About>
+      <section>
         <h2>Stef.co</h2>
         <p>
           Stef.co is de development studio van Stef Thoen. Ik ben een freelance
           full-stack developer met een achtergrond in Informatica en Filosofie.
         </p>
-      </About>
+      </section>
 
       <section>
         <div>
@@ -78,11 +109,11 @@ const IndexPage = () => {
         </div>
       </section>
 
-      <section>
+      <Features>
         <h2>Wat doe ik?</h2>
         <div>
           <article>
-            <i>Design</i>
+            <IconDesign className="icon" />
             <h3>Het ontwerp</h3>
             <p>
               Ik onderzoek, schets en bouw prototypes. Ik zorg voor een
@@ -91,7 +122,7 @@ const IndexPage = () => {
             </p>
           </article>
           <article>
-            <i>Bouw</i>
+            <IconBuild />
             <h3>De bouw</h3>
             <p>
               Responsive websites en webapps gebouwd met een sterke focus op
@@ -100,7 +131,7 @@ const IndexPage = () => {
             </p>
           </article>
           <article>
-            <i>Service</i>
+            <IconService />
             <h3>De service</h3>
             <p>
               Na oplevering voer ik onderhoud uit, host ik je website,
@@ -109,7 +140,7 @@ const IndexPage = () => {
             </p>
           </article>
         </div>
-      </section>
+      </Features>
 
       <section>
         <h2>Wat maak ik?</h2>
