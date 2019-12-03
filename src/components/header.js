@@ -4,8 +4,8 @@ import styled from "styled-components"
 import BackgroundImage from "gatsby-background-image"
 
 const StyledHeader = styled(BackgroundImage)`
-  height: 900px;
   background-size: cover;
+  height: 900px;
 `
 
 const Header = () => {

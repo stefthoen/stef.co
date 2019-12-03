@@ -13,17 +13,23 @@ import Header from "./header"
 import Footer from "./footer"
 import "./layout.css"
 
+const StyledLayout = styled.div``
+
 const StyledMain = styled.main`
   max-width: 768px;
-  margin: 0 auto;
+  margin: -4rem auto 0;
+  z-index: 10;
+  position: relative;
+  background-color: white;
+  padding: 2rem;
 `
 
 const Layout = ({ children }) => (
-  <>
+  <StyledLayout>
     <Header />
     <StyledMain>{children}</StyledMain>
     <Footer />
-  </>
+  </StyledLayout>
 )
 
 Layout.propTypes = {

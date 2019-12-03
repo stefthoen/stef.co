@@ -1,5 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import styled from "styled-components"
 
 import Layout from "../components/layout"
 import Case from "../components/case"
@@ -14,6 +15,8 @@ export const caseImage = graphql`
     }
   }
 `
+
+const About = styled.section``
 
 const IndexPage = () => {
   const imageData = useStaticQuery(graphql`
@@ -39,26 +42,24 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <section>
-        <h2>Stef Thoen</h2>
+      <About>
+        <h2>Stef.co</h2>
         <p>
-          Ik ben een freelance full-stack developer met een achtergrond in
-          Informatica en Filosofie. Ik houd van toegankelijke websites die heel
-          snel zijn.
+          Stef.co is de development studio van Stef Thoen. Ik ben een freelance
+          full-stack developer met een achtergrond in Informatica en Filosofie.
         </p>
-      </section>
+      </About>
 
       <section>
         <div>
           <p>
-            Oktober 2013 vertrokken we met{" "}
+            Oktober 2013 vertrok ik met mijn vrouw{" "}
             <a href="http://joepdezoeperd.nl">Joep de Zoeperd</a> en ben ik door
-            Europa gaan zwerven terwijl ik mooie websites maakte voor mijn fijne
-            klanten.
+            Europa gaan zwerven als digitale nomade.
           </p>
           <p>
-            We zijn gestrand in de Morvan in Frankrijk, waar we twee jaar hebben
-            gewoond in een{" "}
+            Wij zijn gestrand in de Morvan in Frankrijk, waar we twee jaar
+            hebben gewoond in een{" "}
             <a href="https://www.paprikapatterns.com/building-home-mounting-yurt/">
               yurt
             </a>
@@ -70,8 +71,8 @@ const IndexPage = () => {
           </p>
           <p>
             Ik schrijf sporadisch wel eens wat op{" "}
-            <a href="http://twitter.com/stefthoen">Twitter</a>, plaats wel eens
-            een (klus) foto op{" "}
+            <a href="http://twitter.com/stefthoen">Twitter</a> en plaats wel
+            eens een (klus) foto op{" "}
             <a href="https://instagram.com/scnthoen">Instagram</a>.
           </p>
         </div>
