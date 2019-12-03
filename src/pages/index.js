@@ -19,34 +19,50 @@ export const caseImage = graphql`
   }
 `
 
+const StyledLayout = styled(Layout)``
+
+const About = styled.section`
+  grid-area: about;
+`
+
 const Features = styled.section`
-	article {
-		display: grid;
-		grid-template-columns: 1fr 3fr;
-		grid-column-gap 2em;
-		grid-template-areas:
-			"icon description"
-			"name description"
-		;
-		align-items: center;
-		justify-items: center;
-	}
+  grid-area: features;
 
-	.icon {
-		grid-area: icon;
-	}
+  article {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-column-gap: 2em;
+    grid-template-areas:
+      "icon description"
+      "name description";
+    align-items: center;
+    justify-items: center;
+  }
 
-	h2 {
-		grid-area: title;
-	}
+  .icon {
+    grid-area: icon;
+  }
 
-	h3 {
-		grid-area: name;
-	}
+  h2 {
+    grid-area: title;
+  }
 
-	p {
-		grid-area: description;
-	}
+  h3 {
+    grid-area: name;
+  }
+
+  p {
+    grid-area: description;
+  }
+`
+
+const Cases = styled.section`
+  grid-area: cases;
+  display: grid;
+`
+
+const Contact = styled.section`
+  grid-area: contact;
 `
 
 const IndexPage = () => {
@@ -71,50 +87,45 @@ const IndexPage = () => {
   `)
 
   return (
-    <Layout>
+    <StyledLayout>
       <SEO title="Home" />
-      <section>
+      <About>
         <h2>Stef.co</h2>
         <p>
           Stef.co is de development studio van Stef Thoen. Ik ben een freelance
           full-stack developer met een achtergrond in Informatica en Filosofie.
         </p>
-      </section>
-
-      <section>
-        <div>
-          <p>
-            Oktober 2013 vertrok ik met mijn vrouw{" "}
-            <a href="http://joepdezoeperd.nl">Joep de Zoeperd</a> en ben ik door
-            Europa gaan zwerven als digitale nomade.
-          </p>
-          <p>
-            Wij zijn gestrand in de Morvan in Frankrijk, waar we twee jaar
-            hebben gewoond in een{" "}
-            <a href="https://www.paprikapatterns.com/building-home-mounting-yurt/">
-              yurt
-            </a>
-            . Zomer 2017 hebben we een{" "}
-            <a href="http://peuapeu.nl">
-              oude boerderij gekocht die we aan het opknappen zijn
-            </a>
-            .
-          </p>
-          <p>
-            Ik schrijf sporadisch wel eens wat op{" "}
-            <a href="http://twitter.com/stefthoen">Twitter</a> en plaats wel
-            eens een (klus) foto op{" "}
-            <a href="https://instagram.com/scnthoen">Instagram</a>.
-          </p>
-        </div>
-      </section>
+        <p>
+          Oktober 2013 vertrok ik met mijn vrouw{" "}
+          <a href="http://joepdezoeperd.nl">Joep de Zoeperd</a> en ben ik door
+          Europa gaan zwerven als digitale nomade.
+        </p>
+        <p>
+          Wij zijn gestrand in de Morvan in Frankrijk, waar we twee jaar hebben
+          gewoond in een{" "}
+          <a href="https://www.paprikapatterns.com/building-home-mounting-yurt/">
+            yurt
+          </a>
+          . Zomer 2017 hebben we een{" "}
+          <a href="http://peuapeu.nl">
+            oude boerderij gekocht die we aan het opknappen zijn
+          </a>
+          .
+        </p>
+        <p>
+          Ik schrijf sporadisch wel eens wat op{" "}
+          <a href="http://twitter.com/stefthoen">Twitter</a> en plaats wel eens
+          een (klus) foto op{" "}
+          <a href="https://instagram.com/scnthoen">Instagram</a>.
+        </p>
+      </About>
 
       <Features>
         <h2>Wat doe ik?</h2>
         <div>
           <article>
             <IconDesign className="icon" />
-            <h3>Het ontwerp</h3>
+            <h3>Front-end</h3>
             <p>
               Ik onderzoek, schets en bouw prototypes. Ik zorg voor een
               overzichtelijk en doeltreffend ontwerp, een website waar bezoekers
@@ -123,7 +134,7 @@ const IndexPage = () => {
           </article>
           <article>
             <IconBuild />
-            <h3>De bouw</h3>
+            <h3>Back-end</h3>
             <p>
               Responsive websites en webapps gebouwd met een sterke focus op
               performance. Razendsnel waardoor je bezoeker snel vindt wat hij
@@ -132,7 +143,7 @@ const IndexPage = () => {
           </article>
           <article>
             <IconService />
-            <h3>De service</h3>
+            <h3>Service</h3>
             <p>
               Na oplevering voer ik onderhoud uit, host ik je website,
               installeer updates en &apos;tweak&apos; de website voor optimale
@@ -142,7 +153,7 @@ const IndexPage = () => {
         </div>
       </Features>
 
-      <section>
+      <Cases>
         <h2>Wat maak ik?</h2>
         <p>
           Ik bouw responsive websites op maat. Dit gaat van een simpele one-page
@@ -241,9 +252,9 @@ const IndexPage = () => {
             beste echoscopie praktijk van Noord-Nederland.
           </p>
         </Case>
-      </section>
+      </Cases>
 
-      <section>
+      <Contact>
         <h2>Waar kan ik je mee helpen?</h2>
         <p>
           Denk je dat ik je ergens bij kan helpen? Of je nu een simpele website
@@ -251,8 +262,8 @@ const IndexPage = () => {
           dev&apos;er nodig hebt om je designs te bouwen: Stuur mij een e-mail
           op <a href="mailto:hi@stef.co">hi@stef.co</a>.
         </p>
-      </section>
-    </Layout>
+      </Contact>
+    </StyledLayout>
   )
 }
 

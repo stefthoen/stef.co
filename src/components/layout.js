@@ -16,12 +16,21 @@ import "./layout.css"
 const StyledLayout = styled.div``
 
 const StyledMain = styled.main`
-  max-width: 768px;
+  max-width: 1400px;
   margin: -4rem auto 0;
   z-index: 10;
   position: relative;
   background-color: white;
   padding: 2rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 2em;
+  grid-row-gap: 2em;
+  grid-template-areas:
+    "about features"
+    "cases cases"
+    "contact contact";
 `
 
 const Layout = ({ children }) => (
