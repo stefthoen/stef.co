@@ -6,6 +6,9 @@ import BackgroundImage from "gatsby-background-image"
 const StyledHeader = styled(BackgroundImage)`
   background-size: cover;
   height: 900px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
 `
 
 const Header = () => {
@@ -20,9 +23,7 @@ const Header = () => {
       }
     }
   `)
-  return (
-    <StyledHeader fluid={data.desktop.childImageSharp.fluid}></StyledHeader>
-  )
+  return <StyledHeader fluid={data.desktop.childImageSharp.fluid} />
 }
 
 export default Header

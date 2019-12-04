@@ -20,7 +20,9 @@ export const caseImage = graphql`
   }
 `
 
-const StyledLayout = styled(Layout)``
+const StyledLayout = styled(Layout)`
+  margin-top: 900px;
+`
 
 const About = styled.section`
   grid-area: about;

@@ -13,6 +13,27 @@ import Header from "./header"
 import Footer from "./footer"
 import "./layout.css"
 
+const CTA = styled.div`
+  position: fixed;
+  right: 0;
+  top: 0;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #333;
+  color: #ccc;
+  font-size: 18px;
+
+  a {
+    color: #ccc;
+  }
+
+  a:hover {
+    color: #fffbef;
+    border-bottom: 1px solid #fffbef;
+  }
+`
+
 const StyledLayout = styled.div``
 
 const StyledMain = styled.main`
@@ -36,6 +57,11 @@ const StyledMain = styled.main`
 const Layout = ({ children }) => (
   <StyledLayout>
     <Header />
+    <CTA>
+      <div>
+        Mail: <a href="mailto:hi@stef.co">hi@stef.co</a>
+      </div>
+    </CTA>
     <StyledMain>{children}</StyledMain>
     <Footer />
   </StyledLayout>
