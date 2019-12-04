@@ -8,6 +8,7 @@ import SEO from "../components/seo"
 import IconDesign from "../svgs/feature_design.svg"
 import IconBuild from "../svgs/feature_build.svg"
 import IconService from "../svgs/feature_service.svg"
+import LogoSpeld from "../svgs/speld-logo.svg"
 
 export const caseImage = graphql`
   fragment caseImage on File {
@@ -96,7 +97,7 @@ const IndexPage = () => {
           full-stack developer met een achtergrond in Informatica en Filosofie.
         </p>
         <p>
-          Oktober 2013 vertrok ik met mijn vrouw{" "}
+          Oktober 2013 vertrok ik met mijn vrouw en{" "}
           <a href="http://joepdezoeperd.nl">Joep de Zoeperd</a> en ben ik door
           Europa gaan zwerven als digitale nomade.
         </p>
@@ -166,32 +167,59 @@ const IndexPage = () => {
           zien <a href="mailto:hi@stef.co">neem dan contact op</a>.
         </p>
         <Case
-          title="De Speld"
-          url="https://speld.nl"
-          imageData={imageData.speld}
-        >
-          <p>
-            {" "}
-            De Speld is de grootste satirische website van Nederland met
-            maandelijks meer dan 1,5 miljoen bezoekers. Ik heb het afgelopen
-            jaar een grote refactor uitgevoerd en de codebase gemoderniseerd.
-            Daarnaast heb ik nieuwe features ontwikkeld en de website gekoppeld
-            aan een nieuwe advertentie partner. Ten slotte hebben we een “Vage
-            Kennis” abonnement model geintroduceerd waarmee bezoekers lid kunnen
-            worden en een advertentie-vrije versie van de website kunnen zien.
-          </p>
-        </Case>
-        <Case
           title="Quai des Notaires"
           url="https://quaidesnotaires.com"
           imageData={imageData.quaiDesNotaires}
         >
-          <p>
-            Quai des Notaires is een Franse startup in de notaris markt. Ik was
-            verantwoordelijk voor het leiden van een team dat een Symfony 3 web
-            applicatie converteerde naar een Symfony 4 GraphQL API met een React
-            front-end.
-          </p>
+          <div className="summary">
+            <p>
+              Quai des Notaires is een Franse startup in de notaris markt. Ik
+              was verantwoordelijk voor het leiden van een team dat een Symfony
+              3 web applicatie converteerde naar een Symfony 4 GraphQL API met
+              een React front-end.
+            </p>
+          </div>
+          <dl className="stats">
+            <dt>Project duur</dt>
+            <dd>9 maanden</dd>
+            <dt>Functie</dt>
+            <dd>Project Lead, Front-end Developer</dd>
+            <dt>Technologie</dt>
+            <dt>
+              JS, React, Formik, Styled Components, REST API, GraphQL API,
+              Docker, PHP, Symfony, WordPress
+            </dt>
+            <dt>In samenwerking met</dt>
+            <dt>
+              <ul>
+                <li>Quai des Notaires (opdrachtgever)</li>
+                <li>Pentalog (development en infrastructuur)</li>
+                <li>Supercasette (UX design)</li>
+                <li>Simon Derain (UI design)</li>
+              </ul>
+            </dt>
+          </dl>
+        </Case>
+        <Case
+          className="speld"
+          title="De Speld"
+          url="https://speld.nl"
+          imageData={imageData.speld}
+          logo={<LogoSpeld className="logo" />}
+        >
+          <div className="summary">
+            <p>
+              {" "}
+              De Speld is de grootste satirische website van Nederland met
+              maandelijks meer dan 1,5 miljoen bezoekers. Ik heb het afgelopen
+              jaar een grote refactor uitgevoerd en de codebase gemoderniseerd.
+              Daarnaast heb ik nieuwe features ontwikkeld en de website
+              gekoppeld aan een nieuwe advertentie partner. Ten slotte hebben we
+              een “Vage Kennis” abonnement model geintroduceerd waarmee
+              bezoekers lid kunnen worden en een advertentie-vrije versie van de
+              website kunnen zien.
+            </p>
+          </div>
         </Case>
         <Case
           title="Hogeschool Utrecht"
