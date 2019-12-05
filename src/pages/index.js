@@ -156,7 +156,6 @@ const IndexPage = () => {
     <Layout>
       <Header />
       <S.Home>
-        <SEO title="Home" />
         <S.About>
           <h1>Stef Thoen </h1>
           <p>
