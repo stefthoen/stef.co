@@ -3,12 +3,21 @@ import { graphql, useStaticQuery } from "gatsby"
 import styled from "styled-components"
 import BackgroundImage from "gatsby-background-image"
 
-const StyledHeader = styled(BackgroundImage)`
-  background-size: cover;
-  height: 700px;
-  background-repeat: no-repeat;
+const S = {}
+
+S.Header = styled(BackgroundImage)`
   background-position: center center;
-  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+
+  ${props => props.theme.media.size100`
+  `}
+
+  ${props => props.theme.media.size200`
+    background-attachment: fixed;
+    height: 800px;
+  `}
 `
 
 const Header = () => {
@@ -23,7 +32,7 @@ const Header = () => {
       }
     }
   `)
-  return <StyledHeader fluid={data.desktop.childImageSharp.fluid} />
+  return <S.Header fluid={data.desktop.childImageSharp.fluid} />
 }
 
 export default Header

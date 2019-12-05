@@ -17,7 +17,7 @@ import LogoSpeld from "../svgs/speld-logo.svg"
 export const caseImage = graphql`
   fragment caseImage on File {
     childImageSharp {
-      fluid(maxWidth: 768) {
+      fluid(maxWidth: 836) {
         ...GatsbyImageSharpFluid_withWebp
       }
     }
@@ -156,6 +156,7 @@ const IndexPage = () => {
     <Layout>
       <Header />
       <S.Home>
+        <SEO />
         <S.About>
           <h1>Stef Thoen </h1>
           <p>
