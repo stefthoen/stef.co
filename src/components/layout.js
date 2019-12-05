@@ -9,9 +9,9 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 
+import Theme from "./theme"
 import Header from "./header"
 import Footer from "./footer"
-import "./layout.css"
 
 const CTA = styled.div`
   position: fixed;
@@ -20,17 +20,17 @@ const CTA = styled.div`
   margin-top: 1rem;
   margin-right: 1rem;
   padding: 0.5rem 1rem;
-  background-color: #333;
-  color: #ccc;
+  background-color: ${props => props.theme.color.neutral700};
+  color: ${props => props.theme.color.neutral500};
   font-size: 18px;
 
   a {
-    color: #ccc;
+    color: ${props => props.theme.color.neutral500};
   }
 
   a:hover {
-    color: #fffbef;
-    border-bottom: 1px solid #fffbef;
+    color: ${props => props.theme.color.neutral200};
+    border-bottom: 1px solid ${props => props.theme.color.neutral200};
   }
 `
 
@@ -56,14 +56,16 @@ const StyledMain = styled.main`
 
 const Layout = ({ children }) => (
   <StyledLayout>
-    <Header />
-    <CTA>
-      <div>
-        Mail: <a href="mailto:hi@stef.co">hi@stef.co</a>
-      </div>
-    </CTA>
-    <StyledMain>{children}</StyledMain>
-    <Footer />
+    <Theme>
+      <Header />
+      <CTA>
+        <div>
+          Mail: <a href="mailto:hi@stef.co">hi@stef.co</a>
+        </div>
+      </CTA>
+      <StyledMain>{children}</StyledMain>
+      <Footer />
+    </Theme>
   </StyledLayout>
 )
 

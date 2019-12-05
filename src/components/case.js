@@ -8,8 +8,6 @@ const StyledCase = styled.article`
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 2em;
   margin-bottom: 4rem;
-  background-color: rgb(13, 68, 88);
-  color: white;
   grid-template-areas:
     "name image"
     "description image"
