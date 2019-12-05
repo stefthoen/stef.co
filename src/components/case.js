@@ -3,50 +3,42 @@ import PropTypes from "prop-types"
 import Img from "gatsby-image"
 import styled from "styled-components"
 
-const StyledCase = styled.article`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 2em;
-  margin-bottom: 4rem;
-  grid-template-areas:
-    "name image"
-    "description image"
-    "stats image";
+const S = {}
 
+S.Case = styled.article`
   h3 {
-    grid-area: name;
+    font-size: ${props => props.theme.font.size600};
     padding: 1rem;
+
+    a {
+      border-bottom: 0;
+    }
   }
 
-  a {
-    grid-area: image;
-  }
-
-  .summary {
-    grid-area: description;
-    padding: 1rem;
-  }
-
-  .stats {
-    grid-area: stats;
-    padding: 1rem;
-  }
-
-  .logo {
-    grid-area: image;
+  .screenshot {
+    border-bottom: 0;
+    box-shadow: rgba(0, 0, 0, 0.5) 0 0 8px 1px;
+    display: block;
+    margin: ${props => props.theme.space.stack400};
   }
 `
 
-const Case = ({ title, url, imageData, logo, children }) => {
+const Case = ({ title, url, imageData, children }) => {
   return (
-    <StyledCase>
-      <h3>{title}</h3>
-      {children}
-      {logo}
-      <a href={url} target="_blank" rel="noopener noreferrer">
+    <S.Case>
+      <h3>
+        <a href={url}>{title}</a>
+      </h3>
+      <a
+        className="screenshot"
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <Img fluid={imageData.childImageSharp.fluid} />
       </a>
-    </StyledCase>
+      {children}
+    </S.Case>
   )
 }
 

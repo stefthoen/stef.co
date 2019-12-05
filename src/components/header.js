@@ -5,7 +5,7 @@ import BackgroundImage from "gatsby-background-image"
 
 const StyledHeader = styled(BackgroundImage)`
   background-size: cover;
-  height: 900px;
+  height: 700px;
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;

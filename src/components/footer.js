@@ -1,23 +1,28 @@
 import React from "react"
 import styled from "styled-components"
 
-const StyledFooter = styled.footer`
+import Container from "../components/container"
+
+const S = {}
+
+S.Footer = styled.footer`
   background: #333
     url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAHklEQVQIW2NkQAX/GZH4/4FsRpgAmAOSBBFwDkgAAIKuBATRTAAZAAAAAElFTkSuQmCC);
-`
-
-const Inner = styled.div`
-  max-width: 768px;
-  margin: 0 auto;
-  padding-top: 2rem;
-  display: grid;
   color: white;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 2em;
-  grid-template-areas:
-    "address contact administration"
-    "copyright copyright copyright";
+  font-size: ${props => props.theme.font.size300};
+  padding-top: ${props => props.theme.space400};
+  padding-bottom: ${props => props.theme.space400};
 
+  h2 {
+    font-size: ${props => props.theme.font.size500};
+    text-align: left;
+
+    ${props => props.theme.media.size100`
+      text-align: center;
+    `}
+  }
+
+  h2,
   a {
     color: white;
   }
@@ -25,53 +30,71 @@ const Inner = styled.div`
   ul {
     list-style-type: none;
     margin-left: 0;
+    padding: 0;
   }
 
-    grid-area: address;
-  }
+  .content {
+    margin: ${props => props.theme.space.stack300};
 
-  .contact {
-    grid-area: contact;
-  }
-
-  .administration {
-    grid-area: administration;
+    ${props => props.theme.media.size100`
+      display: flex;
+      justify-content: space-between;
+    `}
   }
 
   .copyright {
-    grid-area: copyright;
     text-align: center;
   }
 `
 
 const Footer = () => (
-  <StyledFooter>
-    <Inner>
-      <div className="address">
-        <h2>Postadres</h2>
-        <ul>
-          <li>4 Frétoy</li>
-          <li>71550 Cussy-en-Morvan</li>
-          <li>France</li>
-        </ul>
+  <S.Footer>
+    <Container>
+      <div className="content">
+        <div className="address">
+          <h2>Postadres</h2>
+          <ul>
+            <li>4 Frétoy</li>
+            <li>71550 Cussy-en-Morvan</li>
+            <li>France</li>
+          </ul>
+        </div>
+        <div className="contact">
+          <h2>Contact</h2>
+          <ul>
+            <li>
+              <a
+                href="https://twitter.com/stefthoen"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Twitter
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/scnthoen/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Instagram
+              </a>
+            </li>
+            <li>
+              <a href="mailto:hi@stef.co">hi@stef.co</a>
+            </li>
+          </ul>
+        </div>
+        <div className="administration">
+          <h2>Administratie</h2>
+          <ul>
+            <li>Siret: 81448255000013</li>
+            <li>Bank: NL47 ASNB 0708 3314 67</li>
+            <li>TVA: FR08814482550</li>
+          </ul>
+        </div>
       </div>
-      <div className="contact">
-        <h2>Contact</h2>
-        <ul>
-          <li>
-            E-mail: <a href="mailto:hi@stef.co">hi@stef.co</a>
-          </li>
-        </ul>
-      </div>
-      <div className="administration">
-        <h2>Administratie</h2>
-        <ul>
-          <li>Siret: 81448255000013</li>
-          <li>Bank: NL47 ASNB 0708 3314 67</li>
-          <li>TVA: FR08814482550</li>
-        </ul>
-      </div>
-      <p className="copyright">
+      <footer className="copyright">
         <a
           href="http://creativecommons.org/licenses/by-nc-nd/3.0/"
           target="_blank"
@@ -87,9 +110,9 @@ const Footer = () => (
         >
           Source staat op Github
         </a>
-      </p>
-    </Inner>
-  </StyledFooter>
+      </footer>
+    </Container>
+  </S.Footer>
 )
 
 export default Footer
