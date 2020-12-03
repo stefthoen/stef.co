@@ -21,6 +21,19 @@ S.Case = styled.article`
     display: block;
     margin: ${props => props.theme.space.stack400};
   }
+
+  .content {
+    ${props => props.theme.media.size100`
+      display: flex;
+    `}
+  }
+
+  .summary {
+    ${props => props.theme.media.size100`
+      margin-right: ${props => props.theme.space400};
+      flex: 0 0 50%;
+    `}
+  }
 `
 
 const Case = ({ title, url, imageData, children }) => {
@@ -37,7 +50,7 @@ const Case = ({ title, url, imageData, children }) => {
       >
         <Img fluid={imageData.childImageSharp.fluid} />
       </a>
-      {children}
+      <div className="content">{children}</div>
     </S.Case>
   )
 }

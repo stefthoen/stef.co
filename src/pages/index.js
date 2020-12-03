@@ -5,9 +5,13 @@ import styled from "styled-components"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
 
-import Header from "../components/header"
-import Container from "../components/container"
+import About from "../components/about"
 import Case from "../components/case"
+import Cases from "../components/cases"
+import Contact from "../components/contact"
+import Container from "../components/container"
+import Header from "../components/header"
+import Main from "../components/main"
 
 import IconDesign from "../svgs/feature_design.svg"
 import IconBuild from "../svgs/feature_build.svg"
@@ -25,32 +29,6 @@ export const caseImage = graphql`
 `
 
 const S = {}
-
-S.Home = styled.div`
-  position: relative;
-  background-color: ${props => props.theme.color.neutral200};
-  max-width: 964px;
-  margin: 0 auto;
-  margin-top: -${props => props.theme.space500};
-`
-
-S.About = styled.section`
-  border-top: ${props => props.theme.space100} solid
-    ${props => props.theme.color.neutral700};
-  box-shadow: -5px -1px 5px -5px ${props => props.theme.color.neutral700},
-    5px -1px 5px -5px ${props => props.theme.color.neutral700};
-  font-size: ${props => props.theme.font.size500};
-  line-height: ${props => props.theme.lineheight300};
-  margin: ${props => props.theme.space.stack400};
-  padding-top: ${props => props.theme.space400};
-  padding-left: ${props => props.theme.space400};
-  padding-right: ${props => props.theme.space400};
-
-  ${props => props.theme.media.size100`
-    padding-left: ${props => props.theme.space500};
-    padding-right: ${props => props.theme.space500};
-  `}
-`
 
 S.Story = styled.section`
   line-height: ${props => props.theme.lineheight250};
@@ -116,21 +94,6 @@ S.Features = styled.section`
   }
 `
 
-S.Cases = styled.section`
-  line-height: ${props => props.theme.lineheight250};
-  margin: ${props => props.theme.space.stack500};
-
-  header {
-    margin: ${props => props.theme.space.stack500};
-  }
-`
-
-S.Contact = styled.section`
-  line-height: ${props => props.theme.lineheight250};
-  margin: ${props => props.theme.space.stack500};
-  margin-bottom: ${props => props.theme.space600};
-`
-
 const IndexPage = () => {
   const imageData = useStaticQuery(graphql`
     query {
@@ -155,16 +118,16 @@ const IndexPage = () => {
   return (
     <Layout>
       <Header />
-      <S.Home>
+      <Main>
         <SEO />
-        <S.About>
-          <h1>Stef Thoen </h1>
+        <About>
+          <h1>Stef Thoen</h1>
           <p>
             Ik ben een freelance full-stack developer met een achtergrond in
             Informatica en Filosofie. Ik werk vanuit Frankrijk voor Nederlandse
             klanten.
           </p>
-        </S.About>
+        </About>
         <Container>
           <S.Story>
             <p>
@@ -219,7 +182,7 @@ const IndexPage = () => {
             </div>
           </S.Features>
 
-          <S.Cases>
+          <Cases>
             <header>
               <h2>Wat maak ik?</h2>
               <p>
@@ -239,14 +202,12 @@ const IndexPage = () => {
               url="https://quaidesnotaires.com"
               imageData={imageData.quaiDesNotaires}
             >
-              <div className="summary">
-                <p>
-                  Quai des Notaires is een Franse startup in de notaris markt.
-                  Ik was project lead van een team dat een Symfony 3 web
-                  applicatie met Twig templates converteerde naar een Symfony 4
-                  GraphQL API met een React front-end.
-                </p>
-              </div>
+              <p>
+                Quai des Notaires is een Franse startup in de notaris markt. Ik
+                was project lead van een team dat een Symfony 3 web applicatie
+                met Twig templates converteerde naar een Symfony 4 GraphQL API
+                met een React front-end.
+              </p>
             </Case>
             <Case
               className="speld"
@@ -255,19 +216,17 @@ const IndexPage = () => {
               imageData={imageData.speld}
               logo={<LogoSpeld className="logo" />}
             >
-              <div className="summary">
-                <p>
-                  {" "}
-                  De Speld is de grootste satirische website van Nederland met
-                  maandelijks meer dan 1,5 miljoen bezoekers. Ik heb het
-                  afgelopen jaar een grote refactor uitgevoerd en de codebase
-                  gemoderniseerd. Daarnaast heb ik nieuwe features ontwikkeld en
-                  de website gekoppeld aan een nieuwe advertentie partner. Ten
-                  slotte hebben we een “Vage Kennis” abonnement model
-                  geintroduceerd waarmee bezoekers lid kunnen worden en een
-                  advertentie-vrije versie van de website kunnen zien.
-                </p>
-              </div>
+              <p>
+                {" "}
+                De Speld is de grootste satirische website van Nederland met
+                maandelijks meer dan 1,5 miljoen bezoekers. Ik heb het afgelopen
+                jaar een grote refactor uitgevoerd en de codebase
+                gemoderniseerd. Daarnaast heb ik nieuwe features ontwikkeld en
+                de website gekoppeld aan een nieuwe advertentie partner. Ten
+                slotte hebben we een “Vage Kennis” abonnement model
+                geintroduceerd waarmee bezoekers lid kunnen worden en een
+                advertentie-vrije versie van de website kunnen zien.
+              </p>
             </Case>
             <Case
               title="Hogeschool Utrecht"
@@ -328,9 +287,9 @@ const IndexPage = () => {
                 Echotoon; de beste echoscopie praktijk van Noord-Nederland.
               </p>
             </Case>
-          </S.Cases>
+          </Cases>
 
-          <S.Contact>
+          <Contact>
             <h2>Waar kan ik je mee helpen?</h2>
             <p>
               Denk je dat ik je ergens bij kan helpen? Of je nu een simpele
@@ -338,9 +297,9 @@ const IndexPage = () => {
               een vaste dev&apos;er nodig hebt om je designs te bouwen: Stuur
               mij een e-mail op <a href="mailto:hi@stef.co">hi@stef.co</a>.
             </p>
-          </S.Contact>
+          </Contact>
         </Container>
-      </S.Home>
+      </Main>
     </Layout>
   )
 }

@@ -14,17 +14,13 @@ const getBreakpoints = sizes => {
   }, {})
 }
 
-// --first-color: #333;
-// --second-color: #ccc;
-// --third-color: #fff;
-// --fourth-color: #fffbef;
 const theme = {
   color: {
-    neutral200: "#fffbef", //4
-    neutral500: "#ccc", // 2
-    neutral700: "#333", // 1
-
-    white: "#fff", // 3
+    neutral200: "#fffbef",
+    neutral500: "#ccc",
+    neutral600: "rgb(107, 114, 128)",
+    neutral700: "#333",
+    white: "#fff",
   },
 
   font: {

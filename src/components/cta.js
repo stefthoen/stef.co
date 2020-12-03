@@ -29,7 +29,7 @@ S.CTA = styled.div`
 
 const CTA = () => (
   <S.CTA>
-    <p>Beschikbaar voor werk!</p>
+    <p>Get in touch!</p>
     <p>
       Mail: <a href="mailto:hi@stef.co">hi@stef.co</a>
     </p>
