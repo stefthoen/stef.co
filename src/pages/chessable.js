@@ -67,14 +67,14 @@ const Chessable = () => {
             I've been working most of my working life (10+) as a freelance
             full-stack developer. I have lead remote teams. I've worked on
             PHP/JS/React stacks for SaaS companies. And as a freelancer I'm
-            really self-motivated. I love your product and your vision and I
-            think I'd be a great addition to your team.
+            self-motivated and good at budgetting projects. I love your product
+            and your vision and I think I'd be a great addition to your team.
           </p>
         </About>
         <Container>
           <S.Intro>
             <p>
-              I'm a on-again off-again chess player. My biggest achievement in
+              I'm an on-again off-again chess player. My biggest achievement in
               chess is that I one time won against{" "}
               <a href="https://twitter.com/blackatlantic">Geert</a>, while he
               kept giving me hints that I should keep pushing my pawns. I once
@@ -125,7 +125,7 @@ const Chessable = () => {
                 Chessable in some way. It could be because they showcase the
                 tech stack{" "}
                 <Link to="https://www.chessable.com/careers/">
-                  you guys are looking for
+                  you folks are looking for
                 </Link>
                 , it might be because they're bigger projects with a lot of
                 customers or visitors, or they might be projects where I've
@@ -233,7 +233,7 @@ const Chessable = () => {
                 <p>
                   "Stef built a prototype for us in React Native. He was
                   realistic in estimating how much work it takes to build our
-                  app."
+                  app. We were very happy with Stef!"
                 </p>
               </Testimonial>
             </Case>
@@ -245,9 +245,9 @@ const Chessable = () => {
               <div className="summary">
                 <p></p>
                 <p>
-                  "De Speld" is the largest satirical website in the Netherlands
-                  with more than 1.5 million visitors every month. I took a
-                  legacy codebase and refactored it systematically. I
+                  "De Speld" is the largest satirical news website in the
+                  Netherlands with more than 1.5 million visitors every month. I
+                  took a legacy codebase and refactored it systematically. I
                   implemented a new advertisement model and a subscription
                   model.
                 </p>
