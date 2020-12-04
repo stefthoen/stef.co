@@ -277,9 +277,9 @@ const Chessable = () => {
           <S.Section>
             <h2>About me</h2>
             <p>
-              My wife and I{" "}
-              <a href="https://joepdezoeperd.nl">bought an old firetruck</a>{" "}
-              back in 2013 to travel Europe for a year and got stranded in the{" "}
+              My wife and I bought an{" "}
+              <a href="https://joepdezoeperd.nl">old firetruck</a> back in 2013
+              to travel Europe for a year and got stranded in the{" "}
               <a href="https://www.google.com/search?q=morvan&tbm=isch">
                 Morvan
               </a>
@@ -292,7 +292,7 @@ const Chessable = () => {
               and we're renovating to create space for our two daughters.
             </p>
             <p>
-              I like trail-running. I've ran{" "}
+              I like trail running. I've ran{" "}
               <a href="https://www.youtube.com/watch?v=64dS0rTJCXg">
                 {" "}
                 my first ultra-trail{" "}

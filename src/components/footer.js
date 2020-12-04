@@ -95,21 +95,10 @@ const Footer = () => (
         </div>
       </div>
       <footer className="copyright">
-        <a
-          href="http://creativecommons.org/licenses/by-nc-nd/3.0/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Alles hier &copy; Creative Commons
+        <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/">
+          Everything here &copy; Creative Commons
         </a>{" "}
-        |{" "}
-        <a
-          href="https://github.com/stefthoen/stef.co"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Source staat op Github
-        </a>
+        | <a href="https://github.com/stefthoen/stef.co">Source is on Github</a>
       </footer>
     </Container>
   </S.Footer>

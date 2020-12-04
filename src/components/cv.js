@@ -20,6 +20,10 @@ S.Unit = styled.div`
   line-height: ${props => props.theme.lineheight300};
   margin: ${props => props.theme.space.stack500};
 
+  ul {
+    padding: 0;
+  }
+
   li {
     font-size: ${props => props.theme.font.size500};
     margin-bottom: ${props => props.theme.spaceDefault};
