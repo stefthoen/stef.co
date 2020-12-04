@@ -27,7 +27,7 @@ export const caseImage = graphql`
 
 const S = {}
 
-S.Intro = styled.section`
+S.Section = styled.section`
   line-height: ${props => props.theme.lineheight250};
   margin: ${props => props.theme.space.stack500};
 `
@@ -72,7 +72,7 @@ const Chessable = () => {
           </p>
         </About>
         <Container>
-          <S.Intro>
+          <S.Section>
             <p>
               I'm an on-again off-again chess player. My biggest achievement in
               chess is my win against{" "}
@@ -80,10 +80,10 @@ const Chessable = () => {
               giving me hints that I should keep pushing my pawns. I was
               subscribed to{" "}
               <a href="https://www.youtube.com/channel/UC6hOVYvNn79Sl1Fc1vx2mYA">
-                John's YouTube channel at one time.
+                John's YouTube channel
               </a>{" "}
-              I've even built a chess website, with just one blog post back in
-              2014:{" "}
+              at one time. I've even built a chess website, with just one blog
+              post back in 2014:{" "}
               <a href="https://web.archive.org/web/20150217122218/http://patzer.ch/analyze-your-games-with-a-chess-database-and-engine/">
                 How to Analyse Your Games with a Chess Database and Engine
               </a>
@@ -112,7 +112,7 @@ const Chessable = () => {
               the middle of a big reboot, I've done these before and I would
               love to help.
             </p>
-          </S.Intro>
+          </S.Section>
           <CV />
           <S.Cases>
             <header>
@@ -137,7 +137,7 @@ const Chessable = () => {
             >
               <div className="summary">
                 <p>
-                  Quai des Notaires is a French startup in the Notary market.
+                  Quai des Notaires is a French SaaS in the Notary market.
                   Initially I was asked to analyse the performance of their
                   front-end stack. After I presented my findings, we decided to
                   split up the monolith Symfony 3 app. I was hired as a
@@ -158,11 +158,11 @@ const Chessable = () => {
                 companyURL="https://designsd.fr"
               >
                 <p>
-                  It was a real pleasure working with Stef, with whom
+                  "It was a real pleasure working with Stef, with whom
                   communication has always been very easy. He respected the
                   details of the design that I proposed, which was very
                   important to me. A lot of rigor, simplicity and
-                  professionalism.
+                  professionalism."
                 </p>
               </Testimonial>
             </Case>
@@ -268,17 +268,56 @@ const Chessable = () => {
                   tightened up our site, and as a developer of our Vage Kennis
                   program he has helped us enormously. He is proactive,
                   contributes (pragmatic) solutions and focuses on permanent
-                  improvement.
+                  improvement."
                 </p>
               </Testimonial>
             </Case>
           </S.Cases>
-
+          <S.Section>
+            <h2>About me</h2>
+            <p>
+              My wife and I{" "}
+              <a href="https://joepdezoeperd.nl">bought an old firetruck</a>{" "}
+              back in 2013 to travel Europe for a year and got stranded in the{" "}
+              <a href="https://www.google.com/search?q=morvan&tbm=isch">
+                Morvan
+              </a>
+              , France. We built a yurt and lived in it for a couple of years,
+              but right now it's on{" "}
+              <a href="https://www.airbnb.com/rooms/32543480?s=67&unique_share_id=09f608eb-cd90-429e-b043-2597f02b7012">
+                Airbnb
+              </a>
+              . Three years ago we bought an old farmhouse in the countryside
+              and we're rennovating to create space for our two daughters.
+            </p>
+            <p>
+              I like trail-running and I've ran{" "}
+              <a href="https://www.youtube.com/watch?v=64dS0rTJCXg">
+                my first ultra-trail
+              </a>{" "}
+              last year. Recently I started getting into rock climbing and I'm
+              looking forward to next season when I hopefully will be able to
+              climb outside a lot. On the nerdy site I enjoy{" "}
+              <a href="https://www.pricecharting.com/offers?seller=3k2pl75253fpqia35xhgqw74te&status=collection">
+                retro videogames and consoles
+              </a>{" "}
+              and tinkering with my homelab.{" "}
+            </p>
+            <p>
+              I enjoy self-improvement, self-suffiency, and I love learning and{" "}
+              <a href="https://www.goodreads.com/thoen">reading</a>. According
+              to the Myers-Briggs test I'm a{" "}
+              <a href="https://www.16personalities.com/isfj-personality">
+                Defender
+              </a>
+              .
+            </p>
+          </S.Section>
           <Contact>
             <h2>Can we work together?</h2>
             <p>
               I hope you enjoyed this little presentation! I'd love to talk to
-              you guys and hear more of your future plans and how I might be
+              you folks and hear more of your future plans and how I might be
               able to help. Please send me a message at{" "}
               <a href="mailto:hi@stef.co">hi@stef.co</a> to plan a call.
             </p>
