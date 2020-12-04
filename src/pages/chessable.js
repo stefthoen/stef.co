@@ -288,16 +288,19 @@ const Chessable = () => {
                 Airbnb
               </a>
               . Three years ago we bought an old farmhouse in the countryside
-              and we're rennovating to create space for our two daughters.
+              and we're renovating to create space for our two daughters.
             </p>
             <p>
               I like trail-running and I've ran{" "}
               <a href="https://www.youtube.com/watch?v=64dS0rTJCXg">
                 my first ultra-trail
               </a>{" "}
-              last year. Recently I started getting into rock climbing and I'm
-              looking forward to next season when I hopefully will be able to
-              climb outside a lot. On the nerdy site I enjoy{" "}
+              last year. I hope to run the{" "}
+              <a href="https://utmbmontblanc.com">UTMB</a> one day. Recently I
+              started getting into rock climbing and this winter I'd like to
+              build a <a href="https://www.moonboard.com/">Moon board</a>. In
+              the summer I go for multi-day backpacking hikes in the mountains.
+              On the nerdy side I love{" "}
               <a href="https://www.pricecharting.com/offers?seller=3k2pl75253fpqia35xhgqw74te&status=collection">
                 retro videogames and consoles
               </a>{" "}
