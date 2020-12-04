@@ -65,7 +65,7 @@ const Chessable = () => {
         <About>
           <h1>Chessable & Stef</h1>
           <p>
-            I've spent most of my working life (10+) as a freelance full-stack
+            I've spent most of my working life (15+) as a freelance full-stack
             developer. I've lead remote teams and I've worked on PHP/JS/React
             stacks for SaaS companies. As a freelancer I'm self-motivated and
             good at budgeting projects. I love your product and your vision and
