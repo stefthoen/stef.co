@@ -64,26 +64,26 @@ const Chessable = () => {
         <About>
           <h1>Chessable & Stef</h1>
           <p>
-            I've been working most of my working life (10+) as a freelance
-            full-stack developer. I have lead remote teams. I've worked on
-            PHP/JS/React stacks for SaaS companies. And as a freelancer I'm
-            self-motivated and good at budgetting projects. I love your product
-            and your vision and I think I'd be a great addition to your team.
+            I've spent most of my working life (10+) as a freelance full-stack
+            developer. I've lead remote teams and I've worked on PHP/JS/React
+            stacks for SaaS companies. As a freelancer I'm self-motivated and
+            good at budgeting projects. I love your product and your vision and
+            I think I'd be a great addition to your team.
           </p>
         </About>
         <Container>
           <S.Intro>
             <p>
               I'm an on-again off-again chess player. My biggest achievement in
-              chess is that I one time won against{" "}
-              <a href="https://twitter.com/blackatlantic">Geert</a>, while he
-              kept giving me hints that I should keep pushing my pawns. I once
-              was subscribed to{" "}
+              chess is my win against{" "}
+              <a href="https://twitter.com/blackatlantic">Geert</a>, who kept
+              giving me hints that I should keep pushing my pawns. I was
+              subscribed to{" "}
               <a href="https://www.youtube.com/channel/UC6hOVYvNn79Sl1Fc1vx2mYA">
-                John's YouTube channel
-              </a>
-              . I've even built a chess website, with just one blog post back in
-              2014;{" "}
+                John's YouTube channel at one time.
+              </a>{" "}
+              I've even built a chess website, with just one blog post back in
+              2014:{" "}
               <a href="https://web.archive.org/web/20150217122218/http://patzer.ch/analyze-your-games-with-a-chess-database-and-engine/">
                 How to Analyse Your Games with a Chess Database and Engine
               </a>
@@ -91,28 +91,26 @@ const Chessable = () => {
             </p>
 
             <p>
-              I've used spaced repetition for years. Originally from The
-              Netherlands,{" "}
+              Originally from The Netherlands,{" "}
               <a href="https://lavalleedefretoy.com">
                 I moved to France a couple of years ago
               </a>
               . I'm using <a href="https://apps.ankiweb.net/">Anki</a> to learn
-              vocabulary. I'm even using Anki in a home-brew knowledge system. I
-              think it's a great idea to combine both spaced repetion and chess
-              learning.
+              vocabulary. I'm even using Anki in a home-brew knowledge system.
+              I've used spaced repetition for years and think it's a great idea
+              to combine spaced repetion with chess learning.
             </p>
 
             <p>
-              I created an account and used your product. I researched your
-              current stack on <a href="wappalyzer.com">Wappalyzer</a>. I've
-              read{" "}
+              I've created an account and used your product, researched your
+              current stack on <a href="wappalyzer.com">Wappalyzer</a> and read{" "}
               <a href="https://www.indiehackers.com/interview/chessable-3418ada3ff">
                 David's Indie Hackers update
               </a>{" "}
               in which he calls himself more of a hacker than a developer. I get
               the feeling you have a legacy codebase on your hands and you're in
-              the middle of a big reboot. I've done these before. I'd love to
-              help.
+              the middle of a big reboot, I've done these before and I would
+              love to help.
             </p>
           </S.Intro>
           <CV />
@@ -150,7 +148,7 @@ const Chessable = () => {
                   During a 5 month period I led a team of developers and
                   designers to build a new signup flow. We created a design
                   system, built React components that use Redux for state and
-                  build a GraphQL API on top of Symfony 4.
+                  built a GraphQL API on top of Symfony 4.
                 </p>
               </div>
               <Testimonial
@@ -160,7 +158,7 @@ const Chessable = () => {
                 companyURL="https://designsd.fr"
               >
                 <p>
-                  It was a real pleasure working with Stef with whom
+                  It was a real pleasure working with Stef, with whom
                   communication has always been very easy. He respected the
                   details of the design that I proposed, which was very
                   important to me. A lot of rigor, simplicity and
@@ -205,9 +203,9 @@ const Chessable = () => {
                   products. He works quickly and is affordable. Moreover, he is
                   very pleasant in communication and is proactive. In our
                   project for Hogeschool Utrecht, he knew how to handle the
-                  production process so well, that more could be achieved in the
-                  end product than initially budgeted - not exactly common in IT
-                  land. Highly recommended!"
+                  production process so well, that more could be achieved than
+                  initially budgeted - not exactly common in IT land. Highly
+                  recommended!"
                 </p>
               </Testimonial>
             </Case>
@@ -218,10 +216,12 @@ const Chessable = () => {
             >
               <div className="summary">
                 <p>
-                  "During COVID in the Netherlands, restaurants were allowed to
-                  stay open, but there were strict rules about reservations and
-                  health checks. I've built an initial React Native prototype to
-                  book a reservation and check the occupancy rate."
+                  During the initial months of COVID in the Netherlands,
+                  restaurants were allowed to stay open, but with strict rules
+                  about reservations and health checks. I've built an initial
+                  React Native prototype for a system to book a reservation and
+                  check the occupancy rate, to make it easier for businesses to
+                  comply with these rules.
                 </p>
               </div>
               <Testimonial
@@ -248,8 +248,7 @@ const Chessable = () => {
                   "De Speld" is the largest satirical news website in the
                   Netherlands with more than 1.5 million visitors every month. I
                   took a legacy codebase and refactored it systematically. I
-                  implemented a new advertisement model and a subscription
-                  model.
+                  also implemented new advertisement and subscription models.
                 </p>
                 <p>
                   Currently I'm working on a proposal to change the current
