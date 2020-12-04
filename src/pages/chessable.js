@@ -14,6 +14,7 @@ import Main from "../components/main"
 import Testimonial from "../components/testimonial"
 
 import IconService from "../svgs/feature_service.svg"
+import IconJoep from "../svgs/joep.svg"
 
 export const caseImage = graphql`
   fragment caseImage on File {
@@ -32,7 +33,7 @@ S.Section = styled.section`
   margin: ${props => props.theme.space.stack500};
 `
 
-S.Cases = styled(Cases)`
+S.Main = styled(Main)`
   .icon {
     display: block;
     margin: 0 auto;
@@ -60,7 +61,7 @@ const Chessable = () => {
   return (
     <Layout>
       <Header />
-      <Main>
+      <S.Main>
         <About>
           <h1>Chessable & Stef</h1>
           <p>
@@ -94,11 +95,11 @@ const Chessable = () => {
               Originally from The Netherlands,{" "}
               <a href="https://lavalleedefretoy.com">
                 I moved to France a couple of years ago
-              </a>
-              . I'm using <a href="https://apps.ankiweb.net/">Anki</a> to learn
-              vocabulary. I'm even using Anki in a home-brew knowledge system.
-              I've used spaced repetition for years and think it's a great idea
-              to combine spaced repetion with chess learning.
+              </a>{" "}
+              and I'm using <a href="https://apps.ankiweb.net/">Anki</a> to
+              learn vocabulary. I'm even using Anki in a home-brew knowledge
+              system. I've used spaced repetition for years and think it's a
+              great idea to combine spaced repetion with chess learning.
             </p>
 
             <p>
@@ -114,7 +115,7 @@ const Chessable = () => {
             </p>
           </S.Section>
           <CV />
-          <S.Cases>
+          <Cases>
             <header>
               <IconService className="icon" />
               <h2>Relevant Projects</h2>
@@ -272,8 +273,9 @@ const Chessable = () => {
                 </p>
               </Testimonial>
             </Case>
-          </S.Cases>
+          </Cases>
           <S.Section>
+            <IconJoep className="icon" />
             <h2>About me</h2>
             <p>
               My wife and I{" "}
@@ -291,24 +293,25 @@ const Chessable = () => {
               and we're renovating to create space for our two daughters.
             </p>
             <p>
-              I like trail-running and I've ran{" "}
+              I like trail-running. I've ran{" "}
               <a href="https://www.youtube.com/watch?v=64dS0rTJCXg">
-                my first ultra-trail
+                {" "}
+                my first ultra-trail{" "}
               </a>{" "}
-              last year. I hope to run the{" "}
+              last year and hope to run the{" "}
               <a href="https://utmbmontblanc.com">UTMB</a> one day. Recently I
               started getting into rock climbing and this winter I'd like to
               build a <a href="https://www.moonboard.com/">Moon board</a>. In
-              the summer I go for multi-day backpacking hikes in the mountains.
-              On the nerdy side I love{" "}
+              the summer I go for backpacking hikes in the mountains. On the
+              nerdy side I love{" "}
               <a href="https://www.pricecharting.com/offers?seller=3k2pl75253fpqia35xhgqw74te&status=collection">
                 retro videogames and consoles
               </a>{" "}
               and tinkering with my homelab.{" "}
             </p>
             <p>
-              I enjoy self-improvement, self-suffiency, and I love learning and{" "}
-              <a href="https://www.goodreads.com/thoen">reading</a>. According
+              I enjoy self-improvement, self-suffiency, and I love{" "}
+              <a href="https://www.goodreads.com/thoen">learning</a>. According
               to the Myers-Briggs test I'm a{" "}
               <a href="https://www.16personalities.com/isfj-personality">
                 Defender
@@ -326,7 +329,7 @@ const Chessable = () => {
             </p>
           </Contact>
         </Container>
-      </Main>
+      </S.Main>
     </Layout>
   )
 }

@@ -11,9 +11,12 @@ S.Main = styled.div`
   margin: 0 auto;
   margin-top: -${props => props.theme.space500};
 `
-const Main = ({ children }) => <S.Main>{children}</S.Main>
+const Main = ({ className, children }) => (
+  <S.Main className={className}>{children}</S.Main>
+)
 
 Main.propTypes = {
+  className: PropTypes.node.any,
   children: PropTypes.node.isRequired,
 }
 
