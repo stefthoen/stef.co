@@ -275,7 +275,6 @@ const Chessable = () => {
             </Case>
           </Cases>
           <S.Section>
-            <IconJoep className="icon" />
             <h2>About me</h2>
             <p>
               My wife and I{" "}
