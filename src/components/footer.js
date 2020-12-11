@@ -52,7 +52,7 @@ const Footer = () => (
     <Container>
       <div className="content">
         <div className="address">
-          <h2>Postadres</h2>
+          <h2>Post adress</h2>
           <ul>
             <li>4 Frétoy</li>
             <li>71550 Cussy-en-Morvan</li>
@@ -86,7 +86,7 @@ const Footer = () => (
           </ul>
         </div>
         <div className="administration">
-          <h2>Administratie</h2>
+          <h2>Administration</h2>
           <ul>
             <li>Siret: 81448255000013</li>
             <li>Bank: NL47 ASNB 0708 3314 67</li>
