@@ -10,7 +10,16 @@ S.Contact = styled.section`
   margin-bottom: ${props => props.theme.space600};
 `
 
-const Contact = ({ children }) => <S.Contact>{children}</S.Contact>
+const Contact = () => (
+  <S.Contact>
+    <h2>Can we work together?</h2>
+    <p>
+      I hope you enjoyed this little presentation! I'd love to talk and hear how
+      I might be able to help. Please send me a message at{" "}
+      <a href="mailto:hi@stef.co">hi@stef.co</a> to plan a call.
+    </p>
+  </S.Contact>
+)
 
 Contact.propTypes = {
   children: PropTypes.node.isRequired,
