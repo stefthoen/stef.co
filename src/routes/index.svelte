@@ -8,53 +8,12 @@
 
 <svelte:head>
 	<title>Stef.co</title>
-	<meta name="description" content="Svelte demo app" />
+	<meta name="description" content="Stef.co - Full-stack webdeveloper" />
 </svelte:head>
 
 <section>
-	<h1>
-		<div class="welcome">
-			<picture>
-				<source srcset="svelte-welcome.webp" type="image/webp" />
-				<img src="svelte-welcome.png" alt="Welcome" />
-			</picture>
-		</div>
-
-		to your new<br />SvelteKit app
-	</h1>
-
-	<h2>
-		try editing <strong>src/routes/index.svelte</strong>
-	</h2>
-
-	<Counter />
+  <div class="container mx-auto">
+    <h1 class="my-6 uppercase text-4xl text-center font-bold tracking-widest">Stef Thoen</h1>
+    <p class="text-xl">Ik ben een freelance full-stack developer met een achtergrond in Informatica en Filosofie. Ik werk vanuit Frankrijk voor Nederlandse klanten.</p>
+  </div>
 </section>
-
-<style>
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 1;
-	}
-
-	h1 {
-		width: 100%;
-	}
-
-	.welcome {
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
-	}
-</style>

@@ -3,7 +3,12 @@ const config = {
 
   theme: {
     colors: {
-      'blue': '#1fb6ff',
+      'grey': '#ccc',
+      'white': '#fffbef'
+    },
+    fontFamily: {
+      'display': ['"-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, sans-serif"'],
+      'body': ['"avenir next, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, sans-serif"'],
     },
     extend: {}
   },
