@@ -1,2 +1,6 @@
-<section class="mb-16"><slot></slot></section>
+<script lang="ts">
+  let clazz;
+  export { clazz as class };
+</script>
 
+<section class={`mb-12 ${clazz}`}><slot></slot></section>

@@ -4,7 +4,8 @@ const config = {
   theme: {
     colors: {
       'grey': '#ccc',
-      'white': '#fffbef'
+      'white': '#fffbef',
+      'brown': '#333'
     },
     fontFamily: {
       'display': ['"-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, sans-serif"'],
@@ -18,10 +19,10 @@ const config = {
         lg: '4rem',
       },
       screens: {
-        sm: "960px",
-        md: "960px",
-        lg: "960px",
-        xl: "960px"
+        sm: "100%",
+        md: "768px",
+        lg: "768px",
+        xl: "768px"
       }
     },
     extend: {}
