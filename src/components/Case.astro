@@ -3,16 +3,19 @@ import { Picture } from "astro:assets"
 
 interface Props {
   title: string
+  /** The years of the work, as in "2022–2024". */
+  period?: string
   /** Leave out the link and the screenshot for a client that can't be named. */
   url?: string
   image?: ImageMetadata
 }
 
-const { title, url, image } = Astro.props
+const { title, period, url, image } = Astro.props
 ---
 
 <article class="case">
   <h3>{url ? <a href={url}>{title}</a> : title}</h3>
+  {period && <p class="period">{period}</p>}
   {image && (
     <a class="screenshot" href={url} target="_blank" rel="noopener noreferrer">
       <Picture

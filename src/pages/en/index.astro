@@ -97,14 +97,14 @@ import IconService from "../../svgs/feature_service.svg"
             more, <a href="mailto:hi@stef.co">get in touch</a>.
           </p>
         </header>
-        <Case title="International startup">
+        <Case title="International startup" period="2026–now">
           <p>
             Since September 2026 I've been working on the web app of an
             international startup as a full-stack engineer, in React and
             TypeScript. I can't name them yet.
           </p>
         </Case>
-        <Case title="SaaS for financial advisors">
+        <Case title="SaaS for financial advisors" period="2026">
           <p>
             A multi-tenant platform in Laravel, with Livewire and Filament. I
             can't name the client yet. In 2026 I added features with a lot of
@@ -113,7 +113,12 @@ import IconService from "../../svgs/feature_service.svg"
             a safety net.
           </p>
         </Case>
-        <Case title="Nerds" url="https://nerds.nl" image={nerds}>
+        <Case
+          title="Nerds"
+          period="2024–2025"
+          url="https://nerds.nl"
+          image={nerds}
+        >
           <p>
             Nerds is a helpdesk for all your digital devices and services, also
             as a white-label service for other companies. As lead full-stack
@@ -125,18 +130,25 @@ import IconService from "../../svgs/feature_service.svg"
           </p>
         </Case>
         <Case
-          title="Quai des Notaires"
-          url="https://quaidesnotaires.com"
-          image={quaiDesNotaires}
+          title="Nexus Institute"
+          period="2017–2023"
+          url="https://nexus-institute.com"
+          image={nexusInstituut}
         >
           <p>
-            Quai des Notaires is a French startup in the notary market. I was
-            project lead of a team that converted a Symfony 3 web application
-            with Twig templates into a Symfony 4 GraphQL API with a React
-            front-end.
+            I made the Nexus Institute website responsive, so it scales with
+            different screen sizes. The old website used a bespoke CMS. To loud
+            cheers from the Nexus editors I moved it to WordPress. A new
+            WooCommerce store lets customers order the latest Nexus magazine
+            with great ease.
           </p>
         </Case>
-        <Case title="De Speld" url="https://speld.nl" image={speld}>
+        <Case
+          title="De Speld"
+          period="2018–2021"
+          url="https://speld.nl"
+          image={speld}
+        >
           <p>
             De Speld is the largest satirical website in the Netherlands, with
             more than 1.5 million visitors a month. Over the past year I did a
@@ -148,7 +160,21 @@ import IconService from "../../svgs/feature_service.svg"
           </p>
         </Case>
         <Case
+          title="Quai des Notaires"
+          period="2018–2019"
+          url="https://quaidesnotaires.com"
+          image={quaiDesNotaires}
+        >
+          <p>
+            Quai des Notaires is a French startup in the notary market. I was
+            project lead of a team that converted a Symfony 3 web application
+            with Twig templates into a Symfony 4 GraphQL API with a React
+            front-end.
+          </p>
+        </Case>
+        <Case
           title="Hogeschool Utrecht"
+          period="2018"
           url="https://pathfinder.stef.co"
           image={hogeschoolUtrecht}
         >
@@ -163,19 +189,6 @@ import IconService from "../../svgs/feature_service.svg"
               Panton
             </a>{" "}
             I built a responsive React progressive web app.
-          </p>
-        </Case>
-        <Case
-          title="Nexus Institute"
-          url="https://nexus-institute.com"
-          image={nexusInstituut}
-        >
-          <p>
-            I made the Nexus Institute website responsive, so it scales with
-            different screen sizes. The old website used a bespoke CMS. To loud
-            cheers from the Nexus editors I moved it to WordPress. A new
-            WooCommerce store lets customers order the latest Nexus magazine
-            with great ease.
           </p>
         </Case>
       </Cases>

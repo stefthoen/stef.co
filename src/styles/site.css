@@ -314,6 +314,15 @@ em {
   border-bottom: 0;
 }
 
+/* Sits close under the title, in the room the title leaves below itself. */
+.case .period {
+  color: var(--neutral-600);
+  font-size: var(--size-300);
+  letter-spacing: 0.1em;
+  margin: calc(-1 * var(--space-400)) 0 var(--space-400) 0;
+  text-align: center;
+}
+
 .case .screenshot {
   border-bottom: 0;
   box-shadow: rgba(0, 0, 0, 0.5) 0 0 8px 1px;
