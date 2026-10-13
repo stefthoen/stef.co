@@ -5,12 +5,14 @@ interface Props {
   title: string
   /** The years of the work, as in "2022–2024". */
   period?: string
+  /** What it was built with, as in "Laravel, Livewire, Filament". */
+  tech?: string
   /** Leave out the link and the screenshot for a client that can't be named. */
   url?: string
   image?: ImageMetadata
 }
 
-const { title, period, url, image } = Astro.props
+const { title, period, tech, url, image } = Astro.props
 ---
 
 <article class="case">
@@ -30,4 +32,5 @@ const { title, period, url, image } = Astro.props
   <div class="content">
     <slot />
   </div>
+  {tech && <p class="tech">{tech}</p>}
 </article>

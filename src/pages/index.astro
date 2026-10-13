@@ -8,7 +8,6 @@ import Contact from "../components/Contact.astro"
 import Container from "../components/Container.astro"
 import Header from "../components/Header.astro"
 import Main from "../components/Main.astro"
-import Stack from "../components/Stack.astro"
 import { UI } from "../data/ui"
 
 import chessout from "../images/chessout.png"
@@ -77,7 +76,6 @@ import IconService from "../svgs/feature_service.svg"
             </p>
           </article>
         </div>
-        <Stack />
       </section>
 
       <Cases>
@@ -97,6 +95,7 @@ import IconService from "../svgs/feature_service.svg"
         <Case
           title="Chessout"
           period="2026–nu"
+          tech="React, TypeScript"
           url="https://chessout.com"
           image={chessout}
         >
@@ -107,7 +106,11 @@ import IconService from "../svgs/feature_service.svg"
             TypeScript.
           </p>
         </Case>
-        <Case title="SaaS voor financieel adviseurs" period="2026">
+        <Case
+          title="SaaS voor financieel adviseurs"
+          period="2026"
+          tech="Laravel, Livewire, Filament, Pest, Larastan"
+        >
           <p>
             Een multi-tenant platform in Laravel, met Livewire en Filament. De
             naam van de klant mag ik nog niet noemen. In 2026 heb ik er functies
@@ -119,6 +122,7 @@ import IconService from "../svgs/feature_service.svg"
         <Case
           title="La Vallée de Frétoy"
           period="2026"
+          tech="Astro, Cloudflare Workers"
           url="https://lavalleedefretoy.com"
           image={laValleeDeFretoy}
         >
@@ -131,6 +135,7 @@ import IconService from "../svgs/feature_service.svg"
         <Case
           title="Nerds"
           period="2024–2025"
+          tech="Next.js, React, Tailwind"
           url="https://nerds.nl"
           image={nerds}
         >
@@ -144,7 +149,12 @@ import IconService from "../svgs/feature_service.svg"
             developer begeleid en een pilot opgeleverd voor investeerders.
           </p>
         </Case>
-        <Case title="Voys" period="2022–2024" url="https://www.voys.nl">
+        <Case
+          title="Voys"
+          period="2022–2024"
+          tech="WordPress (Sage, Bedrock), Svelte, TypeScript, Tailwind, Storybook, GitLab CI"
+          url="https://www.voys.nl"
+        >
           <p>
             Voys levert zakelijke telefonie. Als lead full-stack engineer heb ik
             hun WordPress-sites samengevoegd tot één multisite op Sage en
@@ -157,6 +167,7 @@ import IconService from "../svgs/feature_service.svg"
         <Case
           title="Nexus Instituut"
           period="2017–2023"
+          tech="WordPress, WooCommerce, Trellis, CircleCI"
           url="https://nexus-instituut.nl"
           image={nexusInstituut}
         >
@@ -171,7 +182,11 @@ import IconService from "../svgs/feature_service.svg"
             staging en productie.
           </p>
         </Case>
-        <Case title="Lefebvre Sdu" period="2021">
+        <Case
+          title="Lefebvre Sdu"
+          period="2021"
+          tech="TypeScript, React, Next.js, Storybook"
+        >
           <p>
             Lefebvre Sdu is een uitgever van juridische en fiscale
             vakinformatie. Als lead front-end engineer leidde ik een Scrum-team
@@ -182,6 +197,7 @@ import IconService from "../svgs/feature_service.svg"
         <Case
           title="De Speld"
           period="2018–2021"
+          tech="WordPress"
           url="https://speld.nl"
           image={speld}
         >
@@ -199,6 +215,7 @@ import IconService from "../svgs/feature_service.svg"
         <Case
           title="Quai des Notaires"
           period="2018–2019"
+          tech="Symfony, GraphQL, React"
           url="https://quaidesnotaires.com"
           image={quaiDesNotaires}
         >
@@ -212,6 +229,7 @@ import IconService from "../svgs/feature_service.svg"
         <Case
           title="Hogeschool Utrecht"
           period="2018"
+          tech="React, PWA"
           url="https://pathfinder.stef.co"
           image={hogeschoolUtrecht}
         >

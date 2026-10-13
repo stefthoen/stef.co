@@ -8,7 +8,6 @@ import Contact from "../../components/Contact.astro"
 import Container from "../../components/Container.astro"
 import Header from "../../components/Header.astro"
 import Main from "../../components/Main.astro"
-import Stack from "../../components/Stack.astro"
 import { UI } from "../../data/ui"
 
 import chessout from "../../images/chessout.png"
@@ -77,7 +76,6 @@ import IconService from "../../svgs/feature_service.svg"
             </p>
           </article>
         </div>
-        <Stack />
       </section>
 
       <Cases>
@@ -97,6 +95,7 @@ import IconService from "../../svgs/feature_service.svg"
         <Case
           title="Chessout"
           period="2026–now"
+          tech="React, TypeScript"
           url="https://chessout.com"
           image={chessout}
         >
@@ -106,7 +105,11 @@ import IconService from "../../svgs/feature_service.svg"
             the web app as a full-stack engineer, in React and TypeScript.
           </p>
         </Case>
-        <Case title="SaaS for financial advisors" period="2026">
+        <Case
+          title="SaaS for financial advisors"
+          period="2026"
+          tech="Laravel, Livewire, Filament, Pest, Larastan"
+        >
           <p>
             A multi-tenant platform in Laravel, with Livewire and Filament. I
             can't name the client yet. In 2026 I added features with a lot of
@@ -118,6 +121,7 @@ import IconService from "../../svgs/feature_service.svg"
         <Case
           title="La Vallée de Frétoy"
           period="2026"
+          tech="Astro, Cloudflare Workers"
           url="https://lavalleedefretoy.com/en/"
           image={laValleeDeFretoy}
         >
@@ -130,6 +134,7 @@ import IconService from "../../svgs/feature_service.svg"
         <Case
           title="Nerds"
           period="2024–2025"
+          tech="Next.js, React, Tailwind"
           url="https://nerds.nl"
           image={nerds}
         >
@@ -143,7 +148,12 @@ import IconService from "../../svgs/feature_service.svg"
             for investors.
           </p>
         </Case>
-        <Case title="Voys" period="2022–2024" url="https://www.voys.nl">
+        <Case
+          title="Voys"
+          period="2022–2024"
+          tech="WordPress (Sage, Bedrock), Svelte, TypeScript, Tailwind, Storybook, GitLab CI"
+          url="https://www.voys.nl"
+        >
           <p>
             Voys provides business telephony. As lead full-stack engineer I
             merged their WordPress sites into one multisite on Sage and Bedrock
@@ -155,6 +165,7 @@ import IconService from "../../svgs/feature_service.svg"
         <Case
           title="Nexus Institute"
           period="2017–2023"
+          tech="WordPress, WooCommerce, Trellis, CircleCI"
           url="https://nexus-institute.com"
           image={nexusInstituut}
         >
@@ -168,7 +179,11 @@ import IconService from "../../svgs/feature_service.svg"
             production.
           </p>
         </Case>
-        <Case title="Lefebvre Sdu" period="2021">
+        <Case
+          title="Lefebvre Sdu"
+          period="2021"
+          tech="TypeScript, React, Next.js, Storybook"
+        >
           <p>
             Lefebvre Sdu is a publisher of legal and tax information for
             professionals. As lead front-end engineer I led a Scrum team that
@@ -179,6 +194,7 @@ import IconService from "../../svgs/feature_service.svg"
         <Case
           title="De Speld"
           period="2018–2021"
+          tech="WordPress"
           url="https://speld.nl"
           image={speld}
         >
@@ -195,6 +211,7 @@ import IconService from "../../svgs/feature_service.svg"
         <Case
           title="Quai des Notaires"
           period="2018–2019"
+          tech="Symfony, GraphQL, React"
           url="https://quaidesnotaires.com"
           image={quaiDesNotaires}
         >
@@ -208,6 +225,7 @@ import IconService from "../../svgs/feature_service.svg"
         <Case
           title="Hogeschool Utrecht"
           period="2018"
+          tech="React, PWA"
           url="https://pathfinder.stef.co"
           image={hogeschoolUtrecht}
         >

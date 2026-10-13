@@ -299,20 +299,6 @@ em {
   }
 }
 
-.features .stack {
-  color: var(--neutral-600);
-  font-size: var(--size-300);
-  list-style: none;
-  margin: var(--space-400) 0 0 0;
-  padding: 0;
-  text-align: center;
-}
-
-/* Keeps the lines apart where a narrow screen wraps them. */
-.features .stack li + li {
-  margin-top: var(--space-200);
-}
-
 .cases header {
   margin: 0 0 var(--space-500) 0;
 }
@@ -347,6 +333,13 @@ em {
   display: block;
   width: 100%;
   height: auto;
+}
+
+/* What the case was built with, small under its text. */
+.case .tech {
+  color: var(--neutral-600);
+  font-size: var(--size-300);
+  margin: 0;
 }
 
 /* As a flex container the text keeps its own margin under the screenshot. */
