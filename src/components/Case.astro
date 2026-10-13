@@ -3,26 +3,27 @@ import { Picture } from "astro:assets"
 
 interface Props {
   title: string
-  url: string
-  image: ImageMetadata
+  /** Leave out the link and the screenshot for a client that can't be named. */
+  url?: string
+  image?: ImageMetadata
 }
 
 const { title, url, image } = Astro.props
 ---
 
 <article class="case">
-  <h3>
-    <a href={url}>{title}</a>
-  </h3>
-  <a class="screenshot" href={url} target="_blank" rel="noopener noreferrer">
-    <Picture
-      src={image}
-      formats={["webp"]}
-      widths={[418, image.width]}
-      sizes="(max-width: 836px) 100vw, 836px"
-      alt=""
-    />
-  </a>
+  <h3>{url ? <a href={url}>{title}</a> : title}</h3>
+  {image && (
+    <a class="screenshot" href={url} target="_blank" rel="noopener noreferrer">
+      <Picture
+        src={image}
+        formats={["webp"]}
+        widths={[418, image.width]}
+        sizes="(max-width: 836px) 100vw, 836px"
+        alt=""
+      />
+    </a>
+  )}
   <div class="content">
     <slot />
   </div>
