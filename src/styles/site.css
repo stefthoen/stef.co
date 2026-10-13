@@ -1,0 +1,371 @@
+/*
+ * The whole design in one file: tokens, base typography and one block per
+ * component. Two breakpoints: 600px (columns side by side) and 750px (tall
+ * header photo).
+ */
+
+:root {
+  --neutral-200: #fffbef;
+  --neutral-500: #ccc;
+  --neutral-600: rgb(107, 114, 128);
+  --neutral-700: #333;
+
+  --font-heading:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+    Cantarell, sans-serif;
+  --font-body:
+    "Avenir Next", BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+    Cantarell, sans-serif;
+
+  --size-300: 1rem;
+  --size-400: 1.125rem;
+  --size-500: 1.35rem;
+  --size-600: 1.75rem;
+  --size-700: 2.5rem;
+
+  --space-100: 4px;
+  --space-200: 8px;
+  --space-300: 16px;
+  --space-400: 32px;
+  --space-500: 64px;
+  --space-600: 128px;
+
+  /* In em on purpose: each block sets its own, relative to its font size. */
+  --leading-200: 1.25em;
+  --leading-250: 1.45em;
+  --leading-300: 1.5em;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  border-top: var(--space-100) solid var(--neutral-700);
+  background: var(--neutral-200);
+  font-size: 18px;
+  font-family: var(--font-body);
+  color: var(--neutral-700);
+  line-height: var(--leading-200);
+}
+
+a {
+  border-bottom: 1px solid var(--neutral-500);
+  color: var(--neutral-700);
+  text-decoration: none;
+}
+
+a:hover {
+  border-bottom: 1px solid var(--neutral-700);
+}
+
+p {
+  margin-bottom: var(--space-300);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  letter-spacing: 0.1em;
+  color: var(--neutral-700);
+  text-align: center;
+  text-transform: uppercase;
+  line-height: var(--leading-200);
+}
+
+h1 {
+  font-size: var(--size-700);
+}
+
+h2 {
+  font-size: var(--size-600);
+}
+
+h3 {
+  font-size: var(--size-500);
+}
+
+em {
+  font-style: italic;
+}
+
+/* Layout */
+
+.cta {
+  background-color: var(--neutral-700);
+  color: var(--neutral-500);
+  font-size: var(--size-300);
+  padding: var(--space-200) var(--space-300);
+  position: fixed;
+  right: var(--space-300);
+  top: var(--space-300);
+  z-index: 100;
+}
+
+.cta a {
+  color: var(--neutral-500);
+}
+
+.cta p {
+  margin: 0;
+}
+
+.cta a:hover {
+  color: var(--neutral-200);
+  border-bottom: 1px solid var(--neutral-200);
+}
+
+/* The photo comes from Header.astro, which sets both custom properties. */
+.header {
+  background-image: var(--photo-small);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+}
+
+@media (min-width: 750px) {
+  .header {
+    background-image: var(--photo-large);
+    height: 800px;
+  }
+}
+
+.main {
+  position: relative;
+  background-color: var(--neutral-200);
+  max-width: 964px;
+  margin: calc(-1 * var(--space-500)) auto 0;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 900px;
+  padding-left: var(--space-400);
+  padding-right: var(--space-400);
+}
+
+.footer {
+  background: var(--neutral-700)
+    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAHklEQVQIW2NkQAX/GZH4/4FsRpgAmAOSBBFwDkgAAIKuBATRTAAZAAAAAElFTkSuQmCC);
+  color: white;
+  font-size: var(--size-300);
+  padding-top: var(--space-400);
+  padding-bottom: var(--space-400);
+}
+
+.footer h2 {
+  font-size: var(--size-500);
+  text-align: left;
+}
+
+.footer h2,
+.footer a {
+  color: white;
+}
+
+.footer ul {
+  list-style-type: none;
+  margin-left: 0;
+  padding: 0;
+}
+
+.footer .content {
+  margin: 0 0 var(--space-300) 0;
+}
+
+.footer .copyright {
+  text-align: center;
+}
+
+@media (min-width: 600px) {
+  .footer h2 {
+    text-align: center;
+  }
+
+  .footer .content {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+/* Blocks */
+
+.about {
+  border-top: var(--space-100) solid var(--neutral-700);
+  box-shadow:
+    -5px -1px 5px -5px var(--neutral-700),
+    5px -1px 5px -5px var(--neutral-700);
+  font-size: var(--size-500);
+  line-height: var(--leading-300);
+  margin: 0 0 var(--space-400) 0;
+  padding-top: var(--space-400);
+  padding-left: var(--space-400);
+  padding-right: var(--space-400);
+}
+
+@media (min-width: 600px) {
+  .about {
+    padding-left: var(--space-500);
+    padding-right: var(--space-500);
+  }
+}
+
+.story,
+.section,
+.about-me,
+.features,
+.cases {
+  line-height: var(--leading-250);
+  margin: 0 0 var(--space-500) 0;
+}
+
+@media (min-width: 600px) {
+  .story {
+    display: flex;
+  }
+
+  .story p {
+    margin-right: var(--space-300);
+    flex: 1 1 0;
+  }
+
+  .story p:last-child {
+    margin-right: 0;
+  }
+}
+
+.features h2 {
+  margin: 0 0 var(--space-400) 0;
+}
+
+.features svg {
+  display: block;
+  margin: 0 0 var(--space-300) 0;
+}
+
+.features h3 {
+  margin: 0;
+}
+
+.features article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 600px) {
+  .features div {
+    display: flex;
+    justify-content: center;
+  }
+
+  .features article {
+    margin-right: var(--space-300);
+    flex: 1 1 0;
+  }
+
+  .features article:last-child {
+    margin-right: 0;
+  }
+}
+
+.cases header {
+  margin: 0 0 var(--space-500) 0;
+}
+
+.case h3 {
+  font-size: var(--size-600);
+  padding: 1rem;
+}
+
+.case h3 a {
+  border-bottom: 0;
+}
+
+.case .screenshot {
+  border-bottom: 0;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 0 8px 1px;
+  display: block;
+  margin: 0 0 var(--space-400) 0;
+}
+
+/* Fills the column, also where that is wider than the screenshot itself. */
+.case .screenshot img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 600px) {
+  .case .content {
+    display: flex;
+  }
+
+  .case .summary {
+    margin-right: var(--space-400);
+    flex: 0 0 50%;
+  }
+}
+
+.testimonial {
+  margin: 0;
+  font-size: var(--size-300);
+  color: var(--neutral-700);
+  font-style: italic;
+}
+
+.testimonial blockquote {
+  margin: 0;
+}
+
+.contact {
+  line-height: var(--leading-250);
+  margin: 0 0 var(--space-600) 0;
+}
+
+/* The pitch pages (/chessable, /code23, /orchest) */
+
+.pitch .icon {
+  display: block;
+  margin: 0 auto;
+}
+
+@media (min-width: 600px) {
+  .cv {
+    display: flex;
+  }
+}
+
+.cv-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: var(--leading-300);
+  margin: 0 0 var(--space-500) 0;
+}
+
+.cv-unit ul {
+  padding: 0;
+}
+
+.cv-unit li {
+  font-size: var(--size-500);
+  margin-bottom: var(--space-300);
+  list-style: none;
+}
+
+.cv-unit li span:first-child {
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+}
+
+.cv-unit li span:last-child {
+  color: var(--neutral-600);
+  font-size: var(--size-400);
+}

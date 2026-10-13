@@ -1,0 +1,17 @@
+---
+import { getImage } from "astro:assets"
+import photo from "../images/photo-stef.jpg"
+
+// The header is 400px high on a phone and 800px from 750px up; site.css picks
+// the file that goes with it.
+const small = await getImage({ src: photo, width: 1080, format: "webp" })
+const large = await getImage({ src: photo, width: 1920, format: "webp" })
+---
+
+<div
+  class="header"
+  style={{
+    "--photo-small": `url(${small.src})`,
+    "--photo-large": `url(${large.src})`,
+  }}
+></div>
