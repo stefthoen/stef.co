@@ -11,6 +11,7 @@ import Main from "../../components/Main.astro"
 import Stack from "../../components/Stack.astro"
 import { UI } from "../../data/ui"
 
+import chessout from "../../images/chessout.png"
 import hogeschoolUtrecht from "../../images/hogeschool-utrecht.png"
 import laValleeDeFretoy from "../../images/la-vallee-de-fretoy.png"
 import nerds from "../../images/nerds.png"
@@ -93,11 +94,16 @@ import IconService from "../../svgs/feature_service.svg"
             <a href="mailto:hi@stef.co">get in touch</a>.
           </p>
         </header>
-        <Case title="International startup" period="2026–now">
+        <Case
+          title="Chessout"
+          period="2026–now"
+          url="https://chessout.com"
+          image={chessout}
+        >
           <p>
-            Since September 2026 I've been working on the web app of an
-            international startup as a full-stack engineer, in React and
-            TypeScript. I can't name them yet.
+            Chessout is a startup with an app for finding chess players near you
+            to play a game against. Since September 2026 I've been working on
+            the web app as a full-stack engineer, in React and TypeScript.
           </p>
         </Case>
         <Case title="SaaS for financial advisors" period="2026">
