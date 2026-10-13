@@ -18,22 +18,19 @@ Needs Node 22.12 or newer.
 
 ## Where things are
 
-| Path                        | What                                                          |
-| --------------------------- | ------------------------------------------------------------- |
-| `src/pages/index.astro`     | The home page in Dutch, at `/`                                |
-| `src/pages/en/index.astro`  | The home page in English, at `/en/`                           |
-| `src/pages/chessable.astro` | Pitch pages for one company each (English), not linked from   |
-| `src/pages/code23.astro`    | the home page                                                 |
-| `src/pages/orchest.astro`   |                                                               |
-| `src/layouts/Base.astro`    | The frame of every page: head, contact box, flag, footer      |
-| `src/components/`           | The blocks the pages are built from                           |
-| `src/components/cases/`     | One project each, with its testimonial; for the pitch pages   |
-| `src/styles/site.css`       | The whole design: tokens, typography, one block per component |
-| `src/data/site.ts`          | Site title and Twitter handle                                 |
-| `src/data/ui.ts`            | The short texts every page shares, in both languages          |
-| `src/images/`, `src/svgs/`  | Photo, screenshots, icons and flags; Astro resizes the images |
-| `public/`                   | Favicons, copied as they are                                  |
-| `worker/index.js`           | Redirects www and plain http to the main domain               |
+| Path                       | What                                                          |
+| -------------------------- | ------------------------------------------------------------- |
+| `src/pages/index.astro`    | The home page in Dutch, at `/`                                |
+| `src/pages/en/index.astro` | The home page in English, at `/en/`                           |
+| `src/pages/404.astro`      | The page for an address that doesn't exist (English)          |
+| `src/layouts/Base.astro`   | The frame of every page: head, contact box, flag, footer      |
+| `src/components/`          | The blocks the pages are built from                           |
+| `src/styles/site.css`      | The whole design: tokens, typography, one block per component |
+| `src/data/site.ts`         | Site title and Twitter handle                                 |
+| `src/data/ui.ts`           | The short texts every page shares, in both languages          |
+| `src/images/`, `src/svgs/` | Photo, screenshots, icons and flags; Astro resizes the images |
+| `public/`                  | Favicons, copied as they are                                  |
+| `worker/index.js`          | Redirects www and plain http to the main domain               |
 
 ## Two languages
 
@@ -48,7 +45,7 @@ links to the same page in the other language:
 <Base lang="nl" alternate="/en/">
 ```
 
-The pitch pages are in English only and have no flag.
+The 404 page is in English only and has no flag.
 
 ## Whitespace in templates
 

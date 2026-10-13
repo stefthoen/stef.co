@@ -243,8 +243,6 @@ em {
 }
 
 .story,
-.section,
-.about-me,
 .features,
 .cases {
   line-height: var(--leading-250);
@@ -351,71 +349,14 @@ em {
   height: auto;
 }
 
+/* As a flex container the text keeps its own margin under the screenshot. */
 @media (min-width: 600px) {
   .case .content {
     display: flex;
   }
-
-  .case .summary {
-    margin-right: var(--space-400);
-    flex: 0 0 50%;
-  }
-}
-
-.testimonial {
-  margin: 0;
-  font-size: var(--size-300);
-  color: var(--neutral-700);
-  font-style: italic;
-}
-
-.testimonial blockquote {
-  margin: 0;
 }
 
 .contact {
   line-height: var(--leading-250);
   margin: 0 0 var(--space-600) 0;
-}
-
-/* The pitch pages (/chessable, /code23, /orchest) */
-
-.pitch .icon {
-  display: block;
-  margin: 0 auto;
-}
-
-@media (min-width: 600px) {
-  .cv {
-    display: flex;
-  }
-}
-
-.cv-unit {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  line-height: var(--leading-300);
-  margin: 0 0 var(--space-500) 0;
-}
-
-.cv-unit ul {
-  padding: 0;
-}
-
-.cv-unit li {
-  font-size: var(--size-500);
-  margin-bottom: var(--space-300);
-  list-style: none;
-}
-
-.cv-unit li span:first-child {
-  text-transform: uppercase;
-  letter-spacing: 0.1rem;
-  font-weight: bold;
-}
-
-.cv-unit li span:last-child {
-  color: var(--neutral-600);
-  font-size: var(--size-400);
 }
