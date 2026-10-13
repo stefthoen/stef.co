@@ -14,7 +14,8 @@
     "preview": "astro preview",
     "check": "astro check && astro build",
     "format": "prettier --write .",
-    "astro": "astro"
+    "astro": "astro",
+    "deploy": "npm run check && npx wrangler deploy"
   },
   "dependencies": {
     "astro": "^7.3.5",

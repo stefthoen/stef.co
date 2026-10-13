@@ -31,6 +31,7 @@ Needs Node 22.12 or newer.
 | `src/data/site.ts`          | Site title, description and Twitter handle                    |
 | `src/images/`, `src/svgs/`  | Photo, screenshots and icons; Astro resizes the images        |
 | `public/`                   | Favicons, copied as they are                                  |
+| `worker/index.js`           | Redirects www and plain http to the main domain               |
 
 ## Whitespace in templates
 
@@ -46,5 +47,20 @@ Prettier keeps these in place.
 
 ## Deploying
 
-Netlify builds the site with `npm run build` and serves `dist/`; the settings are in
-`netlify.toml`.
+The site runs on Cloudflare as a Worker with static assets (`wrangler.jsonc`). For
+this `wrangler` has to be logged in to the Cloudflare account that holds the stef.co
+zone.
+
+```
+npm run deploy                                  # check, build and put it live
+npm run check && npx wrangler versions upload   # a preview only, live stays as it is
+```
+
+`versions upload` prints an address for that one version. The Worker also answers on
+<https://stef-co.stef-cloudflare.workers.dev>.
+
+stef.co and www.stef.co are routes on the Worker; each needs a proxied DNS record in
+Cloudflare. `worker/index.js` sends www and plain http to <https://stef.co>.
+
+Netlify, where the site was hosted before, still builds every push until the site
+there (`stef-gatsby`) is removed; `netlify.toml` can go with it.
