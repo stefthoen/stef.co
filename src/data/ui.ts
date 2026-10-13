@@ -7,7 +7,7 @@ export type Lang = keyof typeof LANGUAGES
 
 const nl = {
   description:
-    "Ik ben een full-stack webdeveloper. Ik werk vanuit Frankrijk voor Nederlandse klanten.",
+    "Senior full-stack developer: PHP en Laravel, TypeScript en React, DevOps. Remote vanuit Frankrijk.",
   ctaTitle: "Neem contact op!",
   footerAddress: "Postadres",
   footerCountry: "Frankrijk",
@@ -20,7 +20,7 @@ const nl = {
 // Typed after the Dutch texts, so a text that is missing here fails the check.
 const en: typeof nl = {
   description:
-    "I'm a full-stack web developer. I work from France for Dutch clients.",
+    "Senior full-stack developer: PHP and Laravel, TypeScript and React, DevOps. Remote from France.",
   ctaTitle: "Get in touch!",
   footerAddress: "Postal address",
   footerCountry: "France",

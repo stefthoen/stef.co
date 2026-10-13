@@ -56,8 +56,8 @@ Astro 7 treats whitespace like JSX: a line break between text and a tag is dropp
 Where a space is needed across a line break, write `{" "}`, as in
 
 ```astro
-Oktober 2013 vertrok ik met mijn vrouw en{" "}
-<a href="http://joepdezoeperd.nl">Joep de Zoeperd</a> en ben ik ...
+Op basis van het ontwerp van <a href="https://www.panton.nl">Panton</a> heb ik
+...
 ```
 
 Prettier keeps these in place.
