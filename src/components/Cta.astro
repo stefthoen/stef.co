@@ -1,5 +1,15 @@
+---
+import { UI, type Lang } from "../data/ui"
+
+interface Props {
+  lang: Lang
+}
+
+const t = UI[Astro.props.lang]
+---
+
 <div class="cta">
-  <p>Get in touch!</p>
+  <p>{t.ctaTitle}</p>
   <p>
     Mail: <a href="mailto:hi@stef.co">hi@stef.co</a>
   </p>

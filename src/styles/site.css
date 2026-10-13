@@ -95,15 +95,22 @@ em {
 
 /* Layout */
 
+/* Stays in the top right corner: the contact box and, on a page that exists in
+   both languages, the flag that leads to the other one. */
+.topbar {
+  display: flex;
+  gap: var(--space-200);
+  position: fixed;
+  right: var(--space-300);
+  top: var(--space-300);
+  z-index: 100;
+}
+
 .cta {
   background-color: var(--neutral-700);
   color: var(--neutral-500);
   font-size: var(--size-300);
   padding: var(--space-200) var(--space-300);
-  position: fixed;
-  right: var(--space-300);
-  top: var(--space-300);
-  z-index: 100;
 }
 
 .cta a {
@@ -117,6 +124,26 @@ em {
 .cta a:hover {
   color: var(--neutral-200);
   border-bottom: 1px solid var(--neutral-200);
+}
+
+.language {
+  align-items: center;
+  background-color: var(--neutral-700);
+  display: flex;
+  padding: 0 var(--space-300);
+}
+
+.language,
+.language:hover {
+  border-bottom: 0;
+}
+
+.language svg {
+  display: block;
+}
+
+.language:hover svg {
+  outline: 1px solid var(--neutral-200);
 }
 
 /* The photo comes from Header.astro, which sets both custom properties. */

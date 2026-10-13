@@ -1,0 +1,209 @@
+---
+// The same page in Dutch is ../index.astro; change them together.
+import Base from "../../layouts/Base.astro"
+import About from "../../components/About.astro"
+import Case from "../../components/Case.astro"
+import Cases from "../../components/Cases.astro"
+import Contact from "../../components/Contact.astro"
+import Container from "../../components/Container.astro"
+import Header from "../../components/Header.astro"
+import Main from "../../components/Main.astro"
+import { UI } from "../../data/ui"
+
+import echotoon from "../../images/echotoon.png"
+import hogeschoolUtrecht from "../../images/hogeschool-utrecht.png"
+import nerds from "../../images/nerds.png"
+import nexusInstituut from "../../images/nexus-instituut.png"
+import quaiDesNotaires from "../../images/quai-des-notaires.png"
+import speld from "../../images/speld.png"
+
+import IconDesign from "../../svgs/feature_design.svg"
+import IconBuild from "../../svgs/feature_build.svg"
+import IconService from "../../svgs/feature_service.svg"
+---
+
+<Base description={UI.en.description} lang="en" alternate="/">
+  <Header />
+  <Main>
+    <About>
+      <h1>Stef Thoen</h1>
+      <p>
+        I'm a freelance full-stack developer with a background in Computer
+        Science and Philosophy. I work from France for Dutch clients.
+      </p>
+    </About>
+    <Container>
+      <section class="story">
+        <p>
+          In October 2013 I set off with my wife and{" "}
+          <a href="http://joepdezoeperd.nl">Joep de Zoeperd</a> to roam Europe
+          as a digital nomad.
+        </p>
+        <p>
+          We got stranded in the Morvan in France, where we lived in a{" "}
+          <a href="https://www.paprikapatterns.com/building-home-mounting-yurt/">
+            yurt
+          </a>{" "}
+          for two years. In the summer of 2017 we{" "}
+          <a href="http://peuapeu.nl">
+            bought an old farmhouse that we're renovating
+          </a>
+          .
+        </p>
+      </section>
+
+      <section class="features">
+        <h2>What do I do?</h2>
+        <div>
+          <article>
+            <IconDesign class="icon" />
+            <h3>Design</h3>
+            <p>
+              I research, sketch and build prototypes. I make sure the design is
+              clear and effective, a website visitors like to come back to.
+            </p>
+          </article>
+          <article>
+            <IconBuild />
+            <h3>Build</h3>
+            <p>
+              Responsive websites and web apps, built with a strong focus on
+              performance. Blazing fast, so your visitors quickly find what
+              they're looking for.
+            </p>
+          </article>
+          <article>
+            <IconService />
+            <h3>Service</h3>
+            <p>
+              After delivery I do the maintenance, host your website, install
+              updates and tweak the website for the best security and
+              conversion.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <Cases>
+        <header>
+          <h2>What do I make?</h2>
+          <p>
+            I build custom responsive websites, from a simple one-pager to
+            complete webshops. HTML, CSS and JavaScript hold no secrets for me.
+            WordPress is my CMS of choice, but I have experience with plenty of
+            other back-end languages and frameworks.
+          </p>
+          <p>
+            Below is a selection of my most recent work. If you'd like to see
+            more, <a href="mailto:hi@stef.co">get in touch</a>.
+          </p>
+        </header>
+        <Case title="International startup">
+          <p>
+            Since September 2026 I've been working on the web app of an
+            international startup as a full-stack engineer, in React and
+            TypeScript. I can't name them yet.
+          </p>
+        </Case>
+        <Case title="SaaS for financial advisors">
+          <p>
+            A multi-tenant platform in Laravel, with Livewire and Filament. I
+            can't name the client yet. In 2026 I added features with a lot of
+            business rules, including features that use AI. I built much of it
+            with AI agents, with tests (Pest) and static analysis (Larastan) as
+            a safety net.
+          </p>
+        </Case>
+        <Case title="Nerds" url="https://nerds.nl" image={nerds}>
+          <p>
+            Nerds is a helpdesk for all your digital devices and services, also
+            as a white-label service for other companies. As lead full-stack
+            engineer I led the rebuild of their legacy PHP platform in Next.js,
+            React and Tailwind. I built the front-end: a fast, keyboard-first
+            interface on top of one API for several ticketing systems. I also
+            introduced Scrum, mentored a junior developer and delivered a pilot
+            for investors.
+          </p>
+        </Case>
+        <Case
+          title="Quai des Notaires"
+          url="https://quaidesnotaires.com"
+          image={quaiDesNotaires}
+        >
+          <p>
+            Quai des Notaires is a French startup in the notary market. I was
+            project lead of a team that converted a Symfony 3 web application
+            with Twig templates into a Symfony 4 GraphQL API with a React
+            front-end.
+          </p>
+        </Case>
+        <Case title="De Speld" url="https://speld.nl" image={speld}>
+          <p>
+            De Speld is the largest satirical website in the Netherlands, with
+            more than 1.5 million visitors a month. Over the past year I did a
+            big refactor and modernised the codebase. I also developed new
+            features and connected the website to a new advertising partner.
+            Finally we introduced the “Vage Kennis” subscription model, which
+            lets visitors become a member and see an ad-free version of the
+            website.
+          </p>
+        </Case>
+        <Case
+          title="Hogeschool Utrecht"
+          url="https://pathfinder.stef.co"
+          image={hogeschoolUtrecht}
+        >
+          <p>
+            Hogeschool Utrecht asked me to develop a tool for selecting
+            strategies for behaviour change. Based on the design by{" "}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.panton.nl"
+            >
+              Panton
+            </a>{" "}
+            I built a responsive React progressive web app.
+          </p>
+        </Case>
+        <Case
+          title="Nexus Institute"
+          url="https://nexus-institute.com"
+          image={nexusInstituut}
+        >
+          <p>
+            I made the Nexus Institute website responsive, so it scales with
+            different screen sizes. The old website used a bespoke CMS. To loud
+            cheers from the Nexus editors I moved it to WordPress. A new
+            WooCommerce store lets customers order the latest Nexus magazine
+            with great ease.
+          </p>
+        </Case>
+        <Case title="Echotoon" url="https://echotoon.nl" image={echotoon}>
+          <p>
+            Together with visual strategist{" "}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="http://irisvansen.nl"
+            >
+              Iris van Sen
+            </a>{" "}
+            and UX designer{" "}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://leonhuisman.com"
+            >
+              Leon Huisman
+            </a>{" "}
+            we made a responsive WordPress website for Echotoon, the best
+            ultrasound practice in the north of the Netherlands.
+          </p>
+        </Case>
+      </Cases>
+
+      <Contact />
+    </Container>
+  </Main>
+</Base>

@@ -20,18 +20,35 @@ Needs Node 22.12 or newer.
 
 | Path                        | What                                                          |
 | --------------------------- | ------------------------------------------------------------- |
-| `src/pages/index.astro`     | The home page (Dutch)                                         |
+| `src/pages/index.astro`     | The home page in Dutch, at `/`                                |
+| `src/pages/en/index.astro`  | The home page in English, at `/en/`                           |
 | `src/pages/chessable.astro` | Pitch pages for one company each (English), not linked from   |
 | `src/pages/code23.astro`    | the home page                                                 |
 | `src/pages/orchest.astro`   |                                                               |
-| `src/layouts/Base.astro`    | The frame of every page: head, contact box, footer            |
+| `src/layouts/Base.astro`    | The frame of every page: head, contact box, flag, footer      |
 | `src/components/`           | The blocks the pages are built from                           |
-| `src/components/cases/`     | One project each, with its testimonial (English)              |
+| `src/components/cases/`     | One project each, with its testimonial; for the pitch pages   |
 | `src/styles/site.css`       | The whole design: tokens, typography, one block per component |
-| `src/data/site.ts`          | Site title, description and Twitter handle                    |
-| `src/images/`, `src/svgs/`  | Photo, screenshots and icons; Astro resizes the images        |
+| `src/data/site.ts`          | Site title and Twitter handle                                 |
+| `src/data/ui.ts`            | The short texts every page shares, in both languages          |
+| `src/images/`, `src/svgs/`  | Photo, screenshots, icons and flags; Astro resizes the images |
 | `public/`                   | Favicons, copied as they are                                  |
 | `worker/index.js`           | Redirects www and plain http to the main domain               |
+
+## Two languages
+
+The home page exists in Dutch and in English. Each language has its own page file
+with the full text, so a change to one needs the same change in the other. The
+texts in the contact box and the footer are in `src/data/ui.ts`.
+
+A page that passes `alternate` to `Base` gets a flag in the top right corner that
+links to the same page in the other language:
+
+```astro
+<Base lang="nl" alternate="/en/">
+```
+
+The pitch pages are in English only and have no flag.
 
 ## Whitespace in templates
 

@@ -1,20 +1,27 @@
 ---
 import Container from "./Container.astro"
+import { UI, type Lang } from "../data/ui"
+
+interface Props {
+  lang: Lang
+}
+
+const t = UI[Astro.props.lang]
 ---
 
 <footer class="footer">
   <Container>
     <div class="content">
       <div>
-        <h2>Post adress</h2>
+        <h2>{t.footerAddress}</h2>
         <ul>
           <li>4 Frétoy</li>
           <li>71550 Cussy-en-Morvan</li>
-          <li>France</li>
+          <li>{t.footerCountry}</li>
         </ul>
       </div>
       <div>
-        <h2>Contact</h2>
+        <h2>{t.footerContact}</h2>
         <ul>
           <li>
             <a
@@ -40,7 +47,7 @@ import Container from "./Container.astro"
         </ul>
       </div>
       <div>
-        <h2>Administration</h2>
+        <h2>{t.footerAdministration}</h2>
         <ul>
           <li>Siret: 81448255000013</li>
           <li>Bank: NL47 ASNB 0708 3314 67</li>
@@ -50,9 +57,9 @@ import Container from "./Container.astro"
     </div>
     <footer class="copyright">
       <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/">
-        Everything here &copy; Creative Commons
+        {t.footerLicense}
       </a>{" "}
-      | <a href="https://github.com/stefthoen/stef.co">Source is on Github</a>
+      | <a href="https://github.com/stefthoen/stef.co">{t.footerSource}</a>
     </footer>
   </Container>
 </footer>

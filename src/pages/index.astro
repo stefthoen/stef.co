@@ -1,4 +1,5 @@
 ---
+// The same page in English is en/index.astro; change them together.
 import Base from "../layouts/Base.astro"
 import About from "../components/About.astro"
 import Case from "../components/Case.astro"
@@ -7,7 +8,7 @@ import Contact from "../components/Contact.astro"
 import Container from "../components/Container.astro"
 import Header from "../components/Header.astro"
 import Main from "../components/Main.astro"
-import { SITE_DESCRIPTION } from "../data/site"
+import { UI } from "../data/ui"
 
 import echotoon from "../images/echotoon.png"
 import hogeschoolUtrecht from "../images/hogeschool-utrecht.png"
@@ -21,7 +22,7 @@ import IconBuild from "../svgs/feature_build.svg"
 import IconService from "../svgs/feature_service.svg"
 ---
 
-<Base description={SITE_DESCRIPTION}>
+<Base description={UI.nl.description} lang="nl" alternate="/en/">
   <Header />
   <Main>
     <About>
@@ -207,7 +208,13 @@ import IconService from "../svgs/feature_service.svg"
         </Case>
       </Cases>
 
-      <Contact />
+      <Contact>
+        <h2>Waar kan ik je mee helpen?</h2>
+        <p>
+          Denk je dat ik je ergens bij kan helpen? Stuur mij een e-mail op{" "}
+          <a href="mailto:hi@stef.co">hi@stef.co</a>, dan plannen we een call.
+        </p>
+      </Contact>
     </Container>
   </Main>
 </Base>
