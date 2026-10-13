@@ -8,6 +8,7 @@ import Contact from "../../components/Contact.astro"
 import Container from "../../components/Container.astro"
 import Header from "../../components/Header.astro"
 import Main from "../../components/Main.astro"
+import Stack from "../../components/Stack.astro"
 import { UI } from "../../data/ui"
 
 import hogeschoolUtrecht from "../../images/hogeschool-utrecht.png"
@@ -46,46 +47,50 @@ import IconService from "../../svgs/feature_service.svg"
         <h2>What do I do?</h2>
         <div>
           <article>
-            <IconDesign class="icon" />
-            <h3>Design</h3>
-            <p>
-              I research, sketch and build prototypes. I make sure the design is
-              clear and effective, a website visitors like to come back to.
-            </p>
-          </article>
-          <article>
             <IconBuild />
             <h3>Build</h3>
             <p>
-              Responsive websites and web apps, built with a strong focus on
-              performance. Blazing fast, so your visitors quickly find what
-              they're looking for.
+              Full-stack in PHP and Laravel (also Symfony and WordPress) and in
+              TypeScript and React (also Next.js, Svelte and Node.js).
+              Preferably in a codebase that grew too fast: tests and clear
+              conventions first, then new features.
             </p>
           </article>
           <article>
             <IconService />
-            <h3>Service</h3>
+            <h3>Ship</h3>
             <p>
-              After delivery I do the maintenance, host your website, install
-              updates and tweak the website for the best security and
-              conversion.
+              Docker, CI/CD with GitLab CI and GitHub Actions, Terraform, and
+              Linux servers on AWS, DigitalOcean and Hetzner. At home everything
+              runs on NixOS.
+            </p>
+          </article>
+          <article>
+            <IconDesign />
+            <h3>Lead</h3>
+            <p>
+              I was project lead at Quai des Notaires, led remote Scrum teams at
+              Voys and Sdu and introduced Scrum at Nerds. I plan the work, keep
+              the overview and build along. I'd gladly do that as a product
+              owner too.
             </p>
           </article>
         </div>
+        <Stack />
       </section>
 
       <Cases>
         <header>
-          <h2>What do I make?</h2>
+          <h2>Recent work</h2>
           <p>
-            I build custom responsive websites, from a simple one-pager to
-            complete webshops. HTML, CSS and JavaScript hold no secrets for me.
-            WordPress is my CMS of choice, but I have experience with plenty of
-            other back-end languages and frameworks.
+            I build web apps and SaaS platforms and I clean up existing code:
+            replace the legacy, add tests and CI/CD, then keep building. I work
+            AI-first: Claude Code writes most of the code, with tests and static
+            analysis as a safety net.
           </p>
           <p>
-            Below is a selection of my most recent work. If you'd like to see
-            more, <a href="mailto:hi@stef.co">get in touch</a>.
+            Below is my work, newest first. If you'd like to see more,{" "}
+            <a href="mailto:hi@stef.co">get in touch</a>.
           </p>
         </header>
         <Case title="International startup" period="2026–now">

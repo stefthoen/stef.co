@@ -8,6 +8,7 @@ import Contact from "../components/Contact.astro"
 import Container from "../components/Container.astro"
 import Header from "../components/Header.astro"
 import Main from "../components/Main.astro"
+import Stack from "../components/Stack.astro"
 import { UI } from "../data/ui"
 
 import hogeschoolUtrecht from "../images/hogeschool-utrecht.png"
@@ -46,47 +47,50 @@ import IconService from "../svgs/feature_service.svg"
         <h2>Wat doe ik?</h2>
         <div>
           <article>
-            <IconDesign class="icon" />
-            <h3>Ontwerp</h3>
-            <p>
-              Ik onderzoek, schets en bouw prototypes. Ik zorg voor een
-              overzichtelijk en doeltreffend ontwerp, een website waar bezoekers
-              graag naar terugkomen.
-            </p>
-          </article>
-          <article>
             <IconBuild />
-            <h3>Bouw</h3>
+            <h3>Bouwen</h3>
             <p>
-              Responsive websites en webapps gebouwd met een sterke focus op
-              performance. Razendsnel waardoor je bezoeker snel vindt wat hij
-              zoekt.
+              Full-stack in PHP en Laravel (ook Symfony en WordPress) en in
+              TypeScript en React (ook Next.js, Svelte en Node.js). Het liefst
+              in een codebase die te snel gegroeid is: eerst tests en vaste
+              afspraken, dan nieuwe functies.
             </p>
           </article>
           <article>
             <IconService />
-            <h3>Service</h3>
+            <h3>Uitrollen</h3>
             <p>
-              Na oplevering voer ik onderhoud uit, host ik je website,
-              installeer updates en 'tweak' de website voor optimale veiligheid
-              en conversie.
+              Docker, CI/CD met GitLab CI en GitHub Actions, Terraform, en
+              Linux-servers op AWS, DigitalOcean en Hetzner. Thuis draait alles
+              op NixOS.
+            </p>
+          </article>
+          <article>
+            <IconDesign />
+            <h3>Leiden</h3>
+            <p>
+              Ik was projectleider bij Quai des Notaires, leidde remote
+              Scrum-teams bij Voys en Sdu en heb bij Nerds Scrum ingevoerd. Ik
+              plan het werk, houd het overzicht en bouw zelf mee. Dat doe ik ook
+              graag als product owner.
             </p>
           </article>
         </div>
+        <Stack />
       </section>
 
       <Cases>
         <header>
-          <h2>Wat maak ik?</h2>
+          <h2>Recent werk</h2>
           <p>
-            Ik bouw responsive websites op maat. Dit gaat van een simpele
-            one-page tot complete webshops. HTML, CSS en JavaScript kennen voor
-            mij geen geheimen. WordPress is mijn CMS naar keuze, maar ik heb
-            ervaring met een boel andere back-end talen en frameworks.
+            Ik bouw webapps en SaaS-platforms en knap bestaande code op: legacy
+            vervangen, tests en CI/CD erbij, en dan verder bouwen. Ik werk
+            AI-first: Claude Code schrijft het grootste deel van de code, met
+            tests en statische analyse als vangnet.
           </p>
           <p>
-            Hieronder volgt een greep uit mijn meest recente werk. Wil je meer
-            zien <a href="mailto:hi@stef.co">neem dan contact op</a>.
+            Hieronder mijn werk, het nieuwste bovenaan. Wil je meer zien,{" "}
+            <a href="mailto:hi@stef.co">neem dan contact op</a>.
           </p>
         </header>
         <Case title="Internationale startup" period="2026–nu">

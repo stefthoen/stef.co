@@ -1,0 +1,17 @@
+---
+// What I work with, the same in every language. One line per kind: PHP,
+// JavaScript, data, getting it live, and where it runs.
+const STACK = [
+  ["PHP", "Laravel", "Livewire", "Filament", "Symfony", "WordPress"],
+  ["TypeScript", "React", "Next.js", "Svelte", "Node.js", "Tailwind"],
+  ["MySQL", "PostgreSQL", "GraphQL"],
+  ["Docker", "GitLab CI", "GitHub Actions", "Terraform", "Ansible", "NixOS"],
+  ["AWS", "DigitalOcean", "Hetzner"],
+]
+---
+
+<ul class="stack">
+  {STACK.map((line) => (
+    <li>{line.join(", ")}</li>
+  ))}
+</ul>

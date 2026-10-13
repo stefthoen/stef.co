@@ -301,6 +301,20 @@ em {
   }
 }
 
+.features .stack {
+  color: var(--neutral-600);
+  font-size: var(--size-300);
+  list-style: none;
+  margin: var(--space-400) 0 0 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* Keeps the lines apart where a narrow screen wraps them. */
+.features .stack li + li {
+  margin-top: var(--space-200);
+}
+
 .cases header {
   margin: 0 0 var(--space-500) 0;
 }
