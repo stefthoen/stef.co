@@ -1,9 +1,9 @@
 ---
 import Base from "../layouts/Base.astro"
-import { SITE_DESCRIPTION } from "../data/site"
+import { UI } from "../data/ui"
 ---
 
-<Base title="404: Not found" description={SITE_DESCRIPTION}>
+<Base title="404: Not found" description={UI.en.description} lang="en">
   <h1>NOT FOUND</h1>
   <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
 </Base>

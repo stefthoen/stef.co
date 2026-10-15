@@ -3,18 +3,23 @@ import "normalize.css/normalize.css"
 import "../styles/site.css"
 import Cta from "../components/Cta.astro"
 import Footer from "../components/Footer.astro"
+import LanguageSwitch from "../components/LanguageSwitch.astro"
 import { SITE_TITLE, TWITTER_HANDLE } from "../data/site"
+import type { Lang } from "../data/ui"
 
 interface Props {
   /** Page title; left out on the home page. */
   title?: string
   description?: string
-  lang?: string
+  lang?: Lang
+  /** Path of this page in the other language; adds the flag that switches. */
+  alternate?: string
 }
 
-const { title, description, lang = "nl" } = Astro.props
+const { title, description, lang = "nl", alternate } = Astro.props
 
 const fullTitle = title ? `${title} | ${SITE_TITLE}` : SITE_TITLE
+const otherLang: Lang = lang === "nl" ? "en" : "nl"
 ---
 
 <!doctype html>
@@ -27,6 +32,20 @@ const fullTitle = title ? `${title} | ${SITE_TITLE}` : SITE_TITLE
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <title>{fullTitle}</title>
     {description && <meta name="description" content={description} />}
+    {alternate && (
+      <>
+        <link
+          rel="alternate"
+          hreflang={lang}
+          href={new URL(Astro.url.pathname, Astro.site)}
+        />
+        <link
+          rel="alternate"
+          hreflang={otherLang}
+          href={new URL(alternate, Astro.site)}
+        />
+      </>
+    )}
     <meta property="og:title" content={fullTitle} />
     {description && <meta property="og:description" content={description} />}
     <meta property="og:type" content="website" />
@@ -36,10 +55,13 @@ const fullTitle = title ? `${title} | ${SITE_TITLE}` : SITE_TITLE
     {description && <meta name="twitter:description" content={description} />}
   </head>
   <body>
-    <Cta />
+    <div class="topbar">
+      <Cta lang={lang} />
+      {alternate && <LanguageSwitch to={otherLang} href={alternate} />}
+    </div>
     <main>
       <slot />
     </main>
-    <Footer />
+    <Footer lang={lang} />
   </body>
 </html>

@@ -1,0 +1,243 @@
+---
+// The same page in Dutch is ../index.astro; change them together.
+import Base from "../../layouts/Base.astro"
+import About from "../../components/About.astro"
+import Case from "../../components/Case.astro"
+import Cases from "../../components/Cases.astro"
+import Contact from "../../components/Contact.astro"
+import Container from "../../components/Container.astro"
+import Header from "../../components/Header.astro"
+import Main from "../../components/Main.astro"
+import { UI } from "../../data/ui"
+
+import chessout from "../../images/chessout.png"
+import hogeschoolUtrecht from "../../images/hogeschool-utrecht.png"
+import nerds from "../../images/nerds.png"
+import nexusInstituut from "../../images/nexus-instituut.png"
+import quaiDesNotaires from "../../images/quai-des-notaires.png"
+import speld from "../../images/speld.png"
+
+import IconDesign from "../../svgs/feature_design.svg"
+import IconBuild from "../../svgs/feature_build.svg"
+import IconService from "../../svgs/feature_service.svg"
+---
+
+<Base description={UI.en.description} lang="en" alternate="/">
+  <Header />
+  <Main>
+    <About>
+      <h1>Stef Thoen</h1>
+      <p>
+        I'm a senior full-stack developer with more than 20 years of experience
+        and a background in Computer Science and Philosophy. I work remotely
+        from France.
+      </p>
+    </About>
+    <Container>
+      <section class="story">
+        <p>
+          In 2013 I set off to travel Europe in an old fire truck and ended up
+          staying in the Morvan in France. I now live there in an old farmhouse
+          that I'm renovating.
+        </p>
+      </section>
+
+      <section class="features">
+        <h2>What do I do?</h2>
+        <div>
+          <article>
+            <IconBuild />
+            <h3>Build</h3>
+            <p>
+              Full-stack in PHP and Laravel (also Symfony and WordPress) and in
+              TypeScript and React (also Next.js, Svelte and Node.js).
+              Preferably in a codebase that grew too fast: tests and clear
+              conventions first, then new features.
+            </p>
+          </article>
+          <article>
+            <IconService />
+            <h3>Ship</h3>
+            <p>
+              Docker, CI/CD with GitLab CI and GitHub Actions, Terraform, and
+              Linux servers on AWS, DigitalOcean and Hetzner. At home everything
+              runs on NixOS.
+            </p>
+          </article>
+          <article>
+            <IconDesign />
+            <h3>Lead</h3>
+            <p>
+              I was project lead at Quai des Notaires, led remote Scrum teams at
+              Voys and Sdu and introduced Scrum at Nerds. I plan the work, keep
+              the overview and build along. I'd gladly do that as a product
+              owner too.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <Cases>
+        <header>
+          <h2>Recent work</h2>
+          <p>
+            I build web apps and SaaS platforms and I clean up existing code:
+            replace the legacy, add tests and CI/CD, then keep building. I work
+            AI-first: Claude Code writes most of the code, with tests and static
+            analysis as a safety net.
+          </p>
+          <p>
+            Below is my work, newest first. If you'd like to see more,{" "}
+            <a href="mailto:hi@stef.co">get in touch</a>.
+          </p>
+        </header>
+        <Case
+          title="Chessout"
+          period="2026–now"
+          tech="React, TypeScript"
+          url="https://chessout.com"
+          image={chessout}
+        >
+          <p>
+            Chessout is a startup with an app for finding chess players near you
+            to play a game against. Since September 2026 I've been working on
+            the web app as a full-stack engineer, in React and TypeScript.
+          </p>
+        </Case>
+        <Case
+          title="SaaS for financial advisors"
+          period="2026"
+          tech="Laravel, Livewire, Filament, Pest, Larastan"
+        >
+          <p>
+            A multi-tenant platform in Laravel, with Livewire and Filament. I
+            can't name the client yet. In 2026 I added features with a lot of
+            business rules, including features that use AI. I built much of it
+            with AI agents, with tests (Pest) and static analysis (Larastan) as
+            a safety net.
+          </p>
+        </Case>
+        <Case
+          title="Nerds"
+          period="2024–2025"
+          tech="Next.js, React, Tailwind"
+          url="https://nerds.nl"
+          image={nerds}
+        >
+          <p>
+            Nerds is a helpdesk for all your digital devices and services, also
+            as a white-label service for other companies. As lead full-stack
+            engineer I led the rebuild of their legacy PHP platform in Next.js,
+            React and Tailwind. I built the front-end: a fast, keyboard-first
+            interface on top of one API for several ticketing systems. I also
+            introduced Scrum, mentored a junior developer and delivered a pilot
+            for investors.
+          </p>
+        </Case>
+        <Case
+          title="Voys"
+          period="2022–2024"
+          tech="WordPress (Sage, Bedrock), Svelte, TypeScript, Tailwind, Storybook, GitLab CI"
+          url="https://www.voys.nl"
+        >
+          <p>
+            Voys provides business telephony. As lead full-stack engineer I
+            merged their WordPress sites into one multisite on Sage and Bedrock
+            and rewrote the sales funnel from jQuery to Svelte and TypeScript. I
+            also introduced Tailwind, a design system in Storybook, feature
+            flags, code reviews and a CI/CD pipeline with GitLab CI.
+          </p>
+        </Case>
+        <Case
+          title="Nexus Institute"
+          period="2017–2023"
+          tech="WordPress, WooCommerce, Trellis, CircleCI"
+          url="https://nexus-institute.com"
+          image={nexusInstituut}
+        >
+          <p>
+            I made the Nexus Institute website responsive, so it scales with
+            different screen sizes. The old website used a bespoke CMS. To loud
+            cheers from the Nexus editors I moved it to WordPress. A new
+            WooCommerce store lets customers order the latest Nexus magazine
+            with great ease. Later I rebuilt the site with a new design, added
+            subscriptions and memberships, and set up CI/CD to staging and
+            production.
+          </p>
+        </Case>
+        <Case
+          title="Lefebvre Sdu"
+          period="2021"
+          tech="TypeScript, React, Next.js, Storybook"
+        >
+          <p>
+            Lefebvre Sdu is a publisher of legal and tax information for
+            professionals. As lead front-end engineer I led a Scrum team that
+            rebuilt an Angular app in TypeScript and React on Next.js, on top of
+            the existing design system in Storybook.
+          </p>
+        </Case>
+        <Case
+          title="De Speld"
+          period="2018–2021"
+          tech="WordPress"
+          url="https://speld.nl"
+          image={speld}
+        >
+          <p>
+            De Speld is the largest satirical website in the Netherlands, at the
+            time with more than 1.5 million visitors a month. I did a big
+            refactor and modernised the codebase, which raised the Google
+            PageSpeed score by 50 points. I also developed new features and
+            connected the website to a new advertising partner. Finally we
+            introduced the “Vage Kennis” subscription, which lets visitors
+            become a member and see an ad-free version of the website.
+          </p>
+        </Case>
+        <Case
+          title="Quai des Notaires"
+          period="2018–2019"
+          tech="Symfony, GraphQL, React"
+          url="https://quaidesnotaires.com"
+          image={quaiDesNotaires}
+        >
+          <p>
+            Quai des Notaires is a French startup in the notary market. I was
+            project lead of a team that converted a Symfony 3 web application
+            with Twig templates into a Symfony 4 GraphQL API with a React
+            front-end.
+          </p>
+        </Case>
+        <Case
+          title="Hogeschool Utrecht"
+          period="2018"
+          tech="React, PWA"
+          url="https://pathfinder.stef.co"
+          image={hogeschoolUtrecht}
+        >
+          <p>
+            Hogeschool Utrecht asked me to develop a tool for selecting
+            strategies for behaviour change. Based on the design by{" "}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.panton.nl"
+            >
+              Panton
+            </a>{" "}
+            I built a responsive React progressive web app.
+          </p>
+        </Case>
+      </Cases>
+
+      <Contact>
+        <h2>What can I help you with?</h2>
+        <p>
+          I have room for new work. Do you think I can help you with something?
+          Send me an email at <a href="mailto:hi@stef.co">hi@stef.co</a> and
+          we'll plan a call.
+        </p>
+      </Contact>
+    </Container>
+  </Main>
+</Base>

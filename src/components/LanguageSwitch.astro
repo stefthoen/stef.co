@@ -1,0 +1,26 @@
+---
+import { LANGUAGES, type Lang } from "../data/ui"
+import FlagGb from "../svgs/flag_gb.svg"
+import FlagNl from "../svgs/flag_nl.svg"
+
+interface Props {
+  /** The language to switch to; its flag is what shows. */
+  to: Lang
+  /** The same page in that language. */
+  href: string
+}
+
+const { to, href } = Astro.props
+const Flag = to === "en" ? FlagGb : FlagNl
+---
+
+<a
+  class="language"
+  href={href}
+  hreflang={to}
+  lang={to}
+  aria-label={LANGUAGES[to]}
+  title={LANGUAGES[to]}
+>
+  <Flag aria-hidden="true" />
+</a>

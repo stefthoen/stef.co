@@ -95,15 +95,22 @@ em {
 
 /* Layout */
 
+/* Stays in the top right corner: the contact box and, on a page that exists in
+   both languages, the flag that leads to the other one. */
+.topbar {
+  display: flex;
+  gap: var(--space-200);
+  position: fixed;
+  right: var(--space-300);
+  top: var(--space-300);
+  z-index: 100;
+}
+
 .cta {
   background-color: var(--neutral-700);
   color: var(--neutral-500);
   font-size: var(--size-300);
   padding: var(--space-200) var(--space-300);
-  position: fixed;
-  right: var(--space-300);
-  top: var(--space-300);
-  z-index: 100;
 }
 
 .cta a {
@@ -117,6 +124,26 @@ em {
 .cta a:hover {
   color: var(--neutral-200);
   border-bottom: 1px solid var(--neutral-200);
+}
+
+.language {
+  align-items: center;
+  background-color: var(--neutral-700);
+  display: flex;
+  padding: 0 var(--space-300);
+}
+
+.language,
+.language:hover {
+  border-bottom: 0;
+}
+
+.language svg {
+  display: block;
+}
+
+.language:hover svg {
+  outline: 1px solid var(--neutral-200);
 }
 
 /* The photo comes from Header.astro, which sets both custom properties. */
@@ -216,8 +243,6 @@ em {
 }
 
 .story,
-.section,
-.about-me,
 .features,
 .cases {
   line-height: var(--leading-250);
@@ -287,6 +312,15 @@ em {
   border-bottom: 0;
 }
 
+/* Sits close under the title, in the room the title leaves below itself. */
+.case .period {
+  color: var(--neutral-600);
+  font-size: var(--size-300);
+  letter-spacing: 0.1em;
+  margin: calc(-1 * var(--space-400)) 0 var(--space-400) 0;
+  text-align: center;
+}
+
 .case .screenshot {
   border-bottom: 0;
   box-shadow: rgba(0, 0, 0, 0.5) 0 0 8px 1px;
@@ -301,71 +335,21 @@ em {
   height: auto;
 }
 
+/* What the case was built with, small under its text. */
+.case .tech {
+  color: var(--neutral-600);
+  font-size: var(--size-300);
+  margin: 0;
+}
+
+/* As a flex container the text keeps its own margin under the screenshot. */
 @media (min-width: 600px) {
   .case .content {
     display: flex;
   }
-
-  .case .summary {
-    margin-right: var(--space-400);
-    flex: 0 0 50%;
-  }
-}
-
-.testimonial {
-  margin: 0;
-  font-size: var(--size-300);
-  color: var(--neutral-700);
-  font-style: italic;
-}
-
-.testimonial blockquote {
-  margin: 0;
 }
 
 .contact {
   line-height: var(--leading-250);
   margin: 0 0 var(--space-600) 0;
-}
-
-/* The pitch pages (/chessable, /code23, /orchest) */
-
-.pitch .icon {
-  display: block;
-  margin: 0 auto;
-}
-
-@media (min-width: 600px) {
-  .cv {
-    display: flex;
-  }
-}
-
-.cv-unit {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  line-height: var(--leading-300);
-  margin: 0 0 var(--space-500) 0;
-}
-
-.cv-unit ul {
-  padding: 0;
-}
-
-.cv-unit li {
-  font-size: var(--size-500);
-  margin-bottom: var(--space-300);
-  list-style: none;
-}
-
-.cv-unit li span:first-child {
-  text-transform: uppercase;
-  letter-spacing: 0.1rem;
-  font-weight: bold;
-}
-
-.cv-unit li span:last-child {
-  color: var(--neutral-600);
-  font-size: var(--size-400);
 }

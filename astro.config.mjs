@@ -1,7 +1,7 @@
 // @ts-check
 import { defineConfig } from "astro/config"
 
-// Static build; Netlify serves dist/ (see netlify.toml).
+// Static build; Cloudflare serves dist/ (see wrangler.jsonc).
 export default defineConfig({
   site: "https://stef.co",
 })
