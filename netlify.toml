@@ -1,0 +1,9 @@
+# Overrides the build settings in the Netlify UI, which still describe the old
+# Gatsby site (gatsby build, public/). The site moves to Cloudflare (see
+# wrangler.jsonc); this file can go once the Netlify site is removed.
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "24"
