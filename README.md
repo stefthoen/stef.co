@@ -75,6 +75,3 @@ npm run check && npx wrangler versions upload   # a preview only, live stays as 
 
 stef.co and www.stef.co are routes on the Worker; each needs a proxied DNS record in
 Cloudflare. `worker/index.js` sends www and plain http to <https://stef.co>.
-
-Netlify, where the site was hosted before, still builds every push until the site
-there (`stef-gatsby`) is removed; `netlify.toml` can go with it.
